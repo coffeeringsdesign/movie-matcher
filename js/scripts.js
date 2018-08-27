@@ -21,30 +21,14 @@ var fightClub = new Movie("Fight Club", 0, 0, 3, 0, img, "An insomniac office wo
 
 var masterMoviesList = [titanic, fault, bridget];
 
-function sayIfSad(list) {
-  masterMoviesList.forEach(function(movie) {
-    if (movie.sadCategory === 5) {
-      return bridget;
-    } else if (movie.sadCategory === 4) {
-      return ;
-    } else if (movie.sadCategory === 3) {
-      return ;
-    } else if (movie.sadCategory === 2) {
-      return ;
-    } else if (movie.sadCategory === 1) {
-      return ;
-    }
-  });
-}
-
 function sayIfHappy(list) {
   masterMoviesList.forEach(function(movie) {
     if (movie.happyCategory === 5) {
-      return bridget;
+      return gilmore;
     } else if (movie.happyCategory === 4) {
-      return ;
+      return monsters && bridget;
     } else if (movie.happyCategory === 3) {
-      return ;
+      return amelie;
     } else if (movie.happyCategory === 2) {
       return ;
     } else if (movie.happyCategory === 1) {
@@ -53,16 +37,32 @@ function sayIfHappy(list) {
   });
 }
 
+function sayIfSad(list) {
+  masterMoviesList.forEach(function(movie) {
+    if (movie.sadCategory === 5) {
+      return titanic && schindlers;
+    } else if (movie.sadCategory === 4) {
+      return fault;
+    } else if (movie.sadCategory === 3) {
+      return alice;
+    } else if (movie.sadCategory === 2) {
+      return ;
+    } else if (movie.sadCategory === 1) {
+      return ;
+    }
+  });
+}
+
 function sayIfAngst(list) {
   masterMoviesList.forEach(function(movie) {
     if (movie.angstCategory === 5) {
-      return bridget;
+      return donnie && kungFu;
     } else if (movie.angstCategory === 4) {
-      return ;
+      return taken;
     } else if (movie.angstCategory === 3) {
-      return ;
+      return fightClub;
     } else if (movie.angstCategory === 2) {
-      return ;
+      return fiveHundredDays;
     } else if (movie.angstCategory === 1) {
       return ;
     }
@@ -72,9 +72,9 @@ function sayIfAngst(list) {
 function sayIfLove(list) {
   masterMoviesList.forEach(function(movie) {
     if (movie.loveCategory === 5) {
-      return bridget;
+      return sleepless && firstDate;
     } else if (movie.loveCategory === 4) {
-      return ;
+      return crazyStupid;
     } else if (movie.loveCategory === 3) {
       return ;
     } else if (movie.loveCategory === 2) {
