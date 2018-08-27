@@ -1,4 +1,4 @@
-var titanic = new Movie("Titanic", "sad");
+var titanic = new Movie("Titanic", 5, 0, );
 var fault = new Movie("Fault In Our Stars", "sad");
 var bridget = new Movie("Bridget Jones's Diary", "sad");
 // movies et al
@@ -18,9 +18,10 @@ function sayIfSad(list) {
 
 
 // business
-function Movie(title, category) {
+function Movie(title, SadCategory, ) {
   this.title = title;
-  this.category = category;
+  this.sadCategory = SadCategory;
+  this.happyCategory
 }
 
 Movie.prototype.mood = function(moodChoice) { //beingtriggered
