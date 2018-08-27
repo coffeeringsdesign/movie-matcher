@@ -4,6 +4,6 @@
   vertical-align: top;
 }
 
-/* .results {
+.happy, .sad, .love, .angst {
   display: none;
-} */
+}
