@@ -19,7 +19,7 @@ var fightClub = new Movie("Fight Club", 0, 0, 3, 0, img, "An insomniac office wo
 
 // movies et al
 
-var masterMoviesList = [titanic, fault, bridget];
+var masterMoviesList = [gilmore, monsters, bridget, amelie, titanic, fault, schindlers, alice, sleepless, firstDate, fiveHundredDays, crazyStupid, kungFu, taken, donnie, fightClub];
 
 function sayIfSad(list) {
   masterMoviesList.forEach(function(movie) {
