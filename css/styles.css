@@ -4,9 +4,7 @@
   vertical-align: top;
 }
 
-/* .happy, .sad, .love, .angst {
-  display: none;
-} */
+
 
 #customRange1::-webkit-slider-thumb {
   background: #ffc107;
