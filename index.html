@@ -15,7 +15,21 @@
     <div class="container">
       <h1>Movie Mood Matcher</h1>
       <h2>Welcome to our website!</h2>
-      <form id="moodForm">
+      <button type="button" class="btn btn-warning" id="happyButton">Happy</button>
+      <button type="button" class="btn btn-primary" id="sadButton">Sad</button>
+      <button type="button" class="btn btn-dark" id="angstButton">Angst</button>
+      <button type="button" class="btn btn-danger" id="loveButton">Love</button>
+      <form id="sliderForm">
+        <label for="customRange3">How happy are you?</label>
+        <input type="range" class="custom-range" min="1" max="10" step="1" id="customRange1">
+        <label for="customRange3">How sad are you?</label>
+        <input type="range" class="custom-range" min="1" max="10" step="1" id="customRange2">
+        <label for="customRange3">How angsty are you?</label>
+        <input type="range" class="custom-range" min="1" max="10" step="1" id="customRange3">
+        <label for="customRange3">How in love are you?</label>
+        <input type="range" class="custom-range" min="1" max="10" step="1" id="customRange4">
+      </form>
+      <!-- <form id="moodForm">
         <fieldset class="form-group">
           <div class="form-check  form-check-inline">
             <label class="form-check-label">
@@ -43,7 +57,7 @@
           </div>
 
         <button type="submit" class="btn btn-info" id="submitButton">Submit</button>
-      </form>
+      </form> -->
 
       <div class="results">
         <div class="card happy" style="width: 18rem;" value="happy">
