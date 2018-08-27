@@ -12,3 +12,19 @@
 .happySliders, .sadSliders, .angstSliders, .loveSliders {
   display: none;
 }
+
+#customRange1::-webkit-slider-thumb {
+  background: #f4cb42;
+}
+
+#customRange3::-webkit-slider-thumb {
+  background: #212121;
+}
+
+#customRange4::-webkit-slider-thumb {
+  background: #c40000;
+}
+
+.pull-right {
+  float: right;
+}

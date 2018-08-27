@@ -41,9 +41,6 @@ $(document).ready(function() {
     var moodChoice = ($("input[name='optionsRadios']:checked").val());
     // console.log(moodChoice);
 
-
-
-
       if (newMovie.mood(moodChoice) === 1) {
         $(".sad").fadeIn();
       } else if (newMovie.mood(moodChoice) === 2) {
