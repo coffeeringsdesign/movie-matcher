@@ -1,11 +1,27 @@
+var titanic = new Movie("Titanic", "sad");
+var fault = new Movie("Fault In Our Stars", "sad");
+var bridget = new Movie("Bridget Jones's Diary", "sad");
+// movies et al
+
+var masterMoviesList = [titanic, fault, bridget];
+
+function sayIfSad(list) {
+  console.log(list);
+  masterMoviesList.forEach(function(movie) {
+    if (movie.category === 'sad') {
+      console.log('hey this is a sad movie!');
+    }
+  });
+}
+
+
+
+
 // business
 function Movie(title, category) {
   this.title = title;
   this.category = category;
 }
-
-var titanic = new Movie("Titanic", "sad");
-// var fault = new Movie("Fault In Our Stars", "sad");
 
 Movie.prototype.mood = function(moodChoice) { //beingtriggered
   if (moodChoice === "sad") {
