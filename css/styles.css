@@ -8,3 +8,7 @@
 .happy, .sad, .love, .angst {
   display: none;
 }
+
+.happySliders, .sadSliders, .angstSliders, .loveSliders {
+  display: none;
+}

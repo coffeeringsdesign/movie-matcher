@@ -23,10 +23,27 @@ Movie.prototype.mood = function(moodChoice) { //beingtriggered
 $(document).ready(function() {
   var newMovie = new Movie("title", "category");
 
+  $("#happyButton").click(function(){
+    $(".happySliders").fadeIn();
+  })
+  $("#sadButton").click(function(){
+    $(".sadSliders").fadeIn();
+  })
+  $("#angstButton").click(function(){
+    $(".angstSliders").fadeIn();
+  })
+  $("#loveButton").click(function(){
+    $(".loveSliders").fadeIn();
+  })
+
   $("#moodForm").submit(function(event) {
     event.preventDefault();
     var moodChoice = ($("input[name='optionsRadios']:checked").val());
     // console.log(moodChoice);
+
+
+
+
       if (newMovie.mood(moodChoice) === 1) {
         $(".sad").fadeIn();
       } else if (newMovie.mood(moodChoice) === 2) {
