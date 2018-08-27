@@ -36,6 +36,8 @@ $(document).ready(function() {
     $(".loveSliders").fadeIn();
   })
 
+
+
   $("#moodForm").submit(function(event) {
     event.preventDefault();
     var moodChoice = ($("input[name='optionsRadios']:checked").val());
