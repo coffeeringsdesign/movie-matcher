@@ -2,11 +2,10 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/styles.css">
   <script src="js/jquery-3.3.1.js"></script>
   <script src="js/scripts.js"></script>
-
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
   <title>Movie Mood Matcher</title>
   <link href="img/icon.gif" rel="icon" type="img/gif">
 
@@ -21,14 +20,14 @@
       <button type="button" class="btn btn-dark" id="angstButton">Angst</button>
       <button type="button" class="btn btn-danger" id="loveButton">Love</button>
       <form id="sliderForm">
-        <label for="customRange3">How happy are you?</label>
-        <input type="range" class="custom-range" min="1" max="5" step="1" id="customRange1">
-        <label for="customRange3">How sad are you?</label>
-        <input type="range" class="custom-range" min="1" max="5" step="1" id="customRange2">
-        <label for="customRange3">How angsty are you?</label>
-        <input type="range" class="custom-range" min="1" max="5" step="1" id="customRange3">
-        <label for="customRange3">How in love are you?</label>
-        <input type="range" class="custom-range" min="1" max="5" step="1" id="customRange4">
+        <label class="happySliders" for="happyRange">How happy are you?</label>
+        <input type="range" class="custom-range happySliders" min="1" max="10" step="1" id="customRange1">
+        <label class="sadSliders" for="sadRange">How sad are you?</label>
+        <input type="range" class="custom-range sadSliders" min="1" max="10" step="1" id="customRange2">
+        <label class="angstSliders" for="angstRange">How angsty are you?</label>
+        <input type="range" class="custom-range angstSliders" min="1" max="10" step="1" id="customRange3">
+        <label class="loveSliders" for="loveRange">How in love are you?</label>
+        <input type="range" class="custom-range loveSliders" min="1" max="10" step="1" id="customRange4">
       </form>
       <!-- <form id="moodForm">
         <fieldset class="form-group">
