@@ -20,10 +20,6 @@ Movie.prototype.mood = function(moodChoice) { //beingtriggered
 }
 
 // user interface
-// var sad = function() {
-//   (this['category'] = "sad").show();
-// }
-
 $(document).ready(function() {
   var newMovie = new Movie("title", "category");
 
