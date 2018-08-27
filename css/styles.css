@@ -4,26 +4,18 @@
   vertical-align: top;
 }
 
-.happy, .sad, .love, .angst {
+/* .happy, .sad, .love, .angst {
   display: none;
-}
-
-.happySliders, .sadSliders, .angstSliders, .loveSliders {
-  display: none;
-}
+} */
 
 #customRange1::-webkit-slider-thumb {
-  background: #f4cb42;
+  background: #ffc107;
 }
 
 #customRange3::-webkit-slider-thumb {
-  background: #212121;
+  background: #343a40;
 }
 
 #customRange4::-webkit-slider-thumb {
-  background: #c40000;
-}
-
-.pull-right {
-  float: right;
+  background: #dc3545;
 }
