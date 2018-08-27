@@ -14,27 +14,41 @@
     <div class="container">
       <h1>Movie Mood Matcher</h1>
       <h2>Welcome to our website!</h2>
-      <form id="moodForm">
+      <button type="button" class="btn btn-warning" id="happyButton">Happy</button>
+      <button type="button" class="btn btn-primary" id="sadButton">Sad</button>
+      <button type="button" class="btn btn-dark" id="angstButton">Angst</button>
+      <button type="button" class="btn btn-danger" id="loveButton">Love</button>
+      <form id="sliderForm">
+        <label for="customRange3">How happy are you?</label>
+        <input type="range" class="custom-range" min="1" max="10" step="1" id="customRange1">
+        <label for="customRange3">How sad are you?</label>
+        <input type="range" class="custom-range" min="1" max="10" step="1" id="customRange2">
+        <label for="customRange3">How angsty are you?</label>
+        <input type="range" class="custom-range" min="1" max="10" step="1" id="customRange3">
+        <label for="customRange3">How in love are you?</label>
+        <input type="range" class="custom-range" min="1" max="10" step="1" id="customRange4">
+      </form>
+      <!-- <form id="moodForm">
         <fieldset class="form-group">
-          <div class="form-check">
+          <div class="form-check  form-check-inline">
             <label class="form-check-label">
               <input type="radio" class="form-check-input" name="optionsRadios" id="happy" value="happy">
               Happy
             </label>
           </div>
-          <div class="form-check">
+          <div class="form-check form-check-inline">
             <label class="form-check-label">
               <input type="radio" class="form-check-input" name="optionsRadios" id="sad" value="sad">
               Sad
             </label>
           </div>
-          <div class="form-check">
+          <div class="form-check form-check-inline">
             <label class="form-check-label">
               <input type="radio" class="form-check-input" name="optionsRadios" id="love" value="love">
               In Love
             </label>
           </div>
-          <div class="form-check">
+          <div class="form-check form-check-inline">
             <label class="form-check-label">
               <input type="radio" class="form-check-input" name="optionsRadios" id="angst" value="angst">
               Angst
@@ -42,7 +56,7 @@
           </div>
 
         <button type="submit" class="btn btn-info" id="submitButton">Submit</button>
-      </form>
+      </form> -->
 
       <div class="results">
         <div class="card happy" style="width: 18rem;" value="happy">
@@ -50,7 +64,7 @@
           <div class="card-body">
             <h5 class="card-title">Happy Gilmore</h5>
             <p class="card-text">A rejected hockey player puts his skills to the golf course to save his grandmother's house.</p>
-            <a href="https://www.imdb.com/title/tt0116483/" class="btn btn-primary">IMDb Profile</a>
+            <a href="https://www.imdb.com/title/tt0116483/" class="card-link">IMDb Profile</a>
           </div>
         </div>
         <div class="card happy" style="width: 18rem;" value="happy">
@@ -58,7 +72,7 @@
           <div class="card-body">
             <h5 class="card-title">Monsters Inc.</h5>
             <p class="card-text">In order to power the city, monsters have to scare children so that they scream.</p>
-            <a href="https://www.imdb.com/title/tt0198781/" class="btn btn-primary">IMDb Profile</a>
+            <a href="https://www.imdb.com/title/tt0198781/" class="card-link">IMDb Profile</a>
           </div>
         </div>
         <div class="card sad" style="width: 18rem;" value="sad">
@@ -66,7 +80,7 @@
           <div class="card-body">
             <h5 class="card-title">Titanic</h5>
             <p class="card-text">A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.</p>
-            <a href="https://www.imdb.com/title/tt0120338/" class="btn btn-primary">IMDb Profile</a>
+            <a href="https://www.imdb.com/title/tt0120338/" class="card-link">IMDb Profile</a>
           </div>
         </div>
         <div class="card sad" style="width: 18rem;" value="sad">
@@ -74,7 +88,7 @@
           <div class="card-body">
             <h5 class="card-title">The Fault In Our Stars</h5>
             <p class="card-text">Two teenage cancer patients begin a life-affirming journey to visit a reclusive author in Amsterdam.</p>
-            <a href="https://www.imdb.com/title/tt2582846/" class="btn btn-primary">IMDb Profile</a>
+            <a href="https://www.imdb.com/title/tt2582846/" class="card-link">IMDb Profile</a>
           </div>
         </div>
         <div class="card love" style="width: 18rem;" value="love">
@@ -82,7 +96,7 @@
           <div class="card-body">
             <h5 class="card-title">Sleepless In Seattle</h5>
             <p class="card-text">A recently widowed man's son calls a radio talk-show in an attempt to find his father a partner.</p>
-            <a href="https://www.imdb.com/title/tt0108160/" class="btn btn-primary">IMDb Profile</a>
+            <a href="https://www.imdb.com/title/tt0108160/" class="card-link">IMDb Profile</a>
           </div>
         </div>
         <div class="card love" style="width: 18rem" value="love">
@@ -90,7 +104,7 @@
           <div class="card-body">
             <h5 class="card-title">50 First Dates</h5>
             <p class="card-text">Henry Roth is a man afraid of commitment up until he meets the beautiful Lucy. They hit it off and Henry think he's finally found the girl of his dreams, until he discovers she has short-term memory loss and forgets him the next day.</p>
-            <a href="https://www.imdb.com/title/tt0343660/" class="btn btn-primary">IMDb Profile</a>
+            <a href="https://www.imdb.com/title/tt0343660/" class="card-link">IMDb Profile</a>
           </div>
         </div>
         <div class="card angst" style="width: 18rem;" value="angst">
@@ -98,7 +112,7 @@
           <div class="card-body">
             <h5 class="card-title">Kung Fu Hustle</h5>
             <p class="card-text">In Shanghai, China in the 1940s, a wannabe gangster aspires to join the notorious "Axe Gang" while residents of a housing complex exhibit extraordinary powers in defending their turf.</p>
-            <a href="https://www.imdb.com/title/tt0373074/" class="btn btn-primary">IMDb Profile</a>
+            <a href="https://www.imdb.com/title/tt0373074/" class="card-link">IMDb Profile</a>
           </div>
         </div>
         <div class="card angst" style="width: 18rem;" value="angst">
@@ -106,11 +120,10 @@
           <div class="card-body">
             <h5 class="card-title">Taken</h5>
             <p class="card-text">A retired CIA agent travels across Europe and relies on his old skills to save his estranged daughter, who has been kidnapped while on a trip to Paris.</p>
-            <a href="https://www.imdb.com/title/tt0936501/" class="btn btn-primary">IMDb Profile</a>
+            <a href="https://www.imdb.com/title/tt0936501/" class="card-link">IMDb Profile</a>
           </div>
         </div>
       </div>
-
     </div>
   </body>
 </html>
