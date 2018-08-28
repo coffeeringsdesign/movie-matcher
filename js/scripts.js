@@ -40,23 +40,23 @@ var findingNemo = new Movie("Finding Nemo", 0, 1, 0, 0, "img/nemo.jpg", "After h
 
 var masterMoviesList = [titanic, fault, schindlers, coco, findingNemo, alice];
 
-function sayIfHappy(list) {
-  var happyMovie = new Movie();
-  masterMoviesList.forEach(function(movie) {
-    if (movie.happyCategory === 5) {
-      happyMovie = gilmore;
-    } else if (movie.happyCategory === 4) {
-      happyMovie = monsters;  //&& bridget
-    } else if (movie.happyCategory === 3) {
-      happyMovie = amelie;
-    } else if (movie.happyCategory === 2) {
-      happyMovie = up;
-    } else if (movie.happyCategory === 1) {
-      happyMovie = solo;
-    }
-  });
-  return happyMovie;
-}
+// function sayIfHappy(list) {
+//   var happyMovie = new Movie();
+//   masterMoviesList.forEach(function(movie) {
+//     if (movie.happyCategory === 5) {
+//       happyMovie = gilmore;
+//     } else if (movie.happyCategory === 4) {
+//       happyMovie = monsters;  //&& bridget
+//     } else if (movie.happyCategory === 3) {
+//       happyMovie = amelie;
+//     } else if (movie.happyCategory === 2) {
+//       happyMovie = up;
+//     } else if (movie.happyCategory === 1) {
+//       happyMovie = solo;
+//     }
+//   });
+//   return happyMovie;
+// }
 
 function sayIfSad(input) {
   var sadMovie = new Movie();
@@ -76,42 +76,42 @@ function sayIfSad(input) {
   });
   return sadMovie;
 }
-
-function sayIfAngst(list) {
-  var angstMovie = new Movie();
-  masterMoviesList.forEach(function(movie) {
-    if (movie.angstCategory === 5) {
-      angstMovie = donnie; //&& kungFu
-    } else if (movie.angstCategory === 4) {
-      angstMovie = taken;
-    } else if (movie.angstCategory === 3) {
-      angstMovie = fightClub;
-    } else if (movie.angstCategory === 2) {
-      angstMovie = fiveHundredDays;
-    } else if (movie.angstCategory === 1) {
-      angstMovie = eternalSunshine;
-    }
-  });
-  return angstMovie;
-}
-
-function sayIfLove(list) {
-  var loveMovie = new Movie();
-  masterMoviesList.forEach(function(movie) {
-    if (movie.loveCategory === 5) {
-      loveMovie = sleepless; //&& firstDate
-    } else if (movie.loveCategory === 4) {
-      loveMovie = crazyStupid;
-    // } else if (movie.loveCategory === 3) {
-    //   loveMovie = ;
-    // } else if (movie.loveCategory === 2) {
-    //   loveMovie = ;
-    // } else if (movie.loveCategory === 1) {
-    //   loveMovie = ;
-    }
-  });
-  return loveMovie;
-}
+//
+// function sayIfAngst(list) {
+//   var angstMovie = new Movie();
+//   masterMoviesList.forEach(function(movie) {
+//     if (movie.angstCategory === 5) {
+//       angstMovie = donnie; //&& kungFu
+//     } else if (movie.angstCategory === 4) {
+//       angstMovie = taken;
+//     } else if (movie.angstCategory === 3) {
+//       angstMovie = fightClub;
+//     } else if (movie.angstCategory === 2) {
+//       angstMovie = fiveHundredDays;
+//     } else if (movie.angstCategory === 1) {
+//       angstMovie = eternalSunshine;
+//     }
+//   });
+//   return angstMovie;
+// }
+//
+// function sayIfLove(list) {
+//   var loveMovie = new Movie();
+//   masterMoviesList.forEach(function(movie) {
+//     if (movie.loveCategory === 5) {
+//       loveMovie = sleepless; //&& firstDate
+//     } else if (movie.loveCategory === 4) {
+//       loveMovie = crazyStupid;
+//     // } else if (movie.loveCategory === 3) {
+//     //   loveMovie = ;
+//     // } else if (movie.loveCategory === 2) {
+//     //   loveMovie = ;
+//     // } else if (movie.loveCategory === 1) {
+//     //   loveMovie = ;
+//     }
+//   });
+//   return loveMovie;
+// }
 
 // business
 function Movie(title, happyCategory, sadCategory, angstCategory, loveCategory, imgFile, description, link) {
@@ -160,29 +160,31 @@ $(document).ready(function() {
 
 
 
-  $("#sliderForm").submit(function(event) {
+  $("#sadSubmit").submit(function(event) {
     event.preventDefault();
     $(".results").show();
 
-    var happyInput = $("input[id='happyRange']").val();
     var sadInput = $("input[id='sadRange']").val();
-    // console.log(sadInput);
-
-    var angstInput = $("input[id='angstRange']").val();
-    var loveInput = $("input[id='loveRange']").val();
-
-    var happyResult = sayIfHappy(happyInput);
     newMovie = sayIfSad(sadInput);
-    // console.log(newMovie.title);
     $("#title").text(newMovie.title);
     $("#description").text(newMovie.description);
     $("#linkLocation").append("<a href='" + newMovie.link + "'>IMDb Profile</a>");
     $("#imageLocation").append("<img class='card-img-top' src='" + newMovie.imgFile + "'>");
-
-    var angstResult = sayIfAngst(angstInput);
-    var loveResult = sayIfLove(loveInput);
-    // $("#testText").text(newMovie.title);
   });
+
+
+    // console.log(sadInput);
+
+    // var happyInput = $("input[id='happyRange']").val();
+    // var angstInput = $("input[id='angstRange']").val();
+    // var loveInput = $("input[id='loveRange']").val();
+    //
+    // var happyResult = sayIfHappy(happyInput);
+    // console.log(newMovie.title);
+    //
+    // var angstResult = sayIfAngst(angstInput);
+    // var loveResult = sayIfLove(loveInput);
+    // $("#testText").text(newMovie.title);
 
 
 
