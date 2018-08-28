@@ -41,19 +41,21 @@ var titanic = new Movie("Titanic", 0, 5, 0, 0, "img/titanic.jpg", "A seventeen-y
 var masterMoviesList = [titanic];
 
 function sayIfHappy(list) {
+  var happyMovie = new Movie();
   masterMoviesList.forEach(function(movie) {
     if (movie.happyCategory === 5) {
-      return gilmore;
+      happyMovie = gilmore;
     } else if (movie.happyCategory === 4) {
-      return monsters;  //&& bridget
+      happyMovie = monsters;  //&& bridget
     } else if (movie.happyCategory === 3) {
-      return amelie;
+      happyMovie = amelie;
     } else if (movie.happyCategory === 2) {
-      return up;
+      happyMovie = up;
     } else if (movie.happyCategory === 1) {
-      return solo;
+      happyMovie = solo;
     }
   });
+  return happyMovie;
 }
 
 function sayIfSad(input) {
@@ -76,35 +78,39 @@ function sayIfSad(input) {
 }
 
 function sayIfAngst(list) {
+  var angstMovie = new Movie();
   masterMoviesList.forEach(function(movie) {
     if (movie.angstCategory === 5) {
-      return donnie; //&& kungFu
+      angstMovie = donnie; //&& kungFu
     } else if (movie.angstCategory === 4) {
-      return taken;
+      angstMovie = taken;
     } else if (movie.angstCategory === 3) {
-      return fightClub;
+      angstMovie = fightClub;
     } else if (movie.angstCategory === 2) {
-      return fiveHundredDays;
+      angstMovie = fiveHundredDays;
     } else if (movie.angstCategory === 1) {
-      return eternalSunshine;
+      angstMovie = eternalSunshine;
     }
   });
+  return angstMovie;
 }
 
 function sayIfLove(list) {
+  var loveMovie = new Movie();
   masterMoviesList.forEach(function(movie) {
     if (movie.loveCategory === 5) {
-      return sleepless; //&& firstDate
+      loveMovie = sleepless; //&& firstDate
     } else if (movie.loveCategory === 4) {
-      return crazyStupid;
+      loveMovie = crazyStupid;
     } else if (movie.loveCategory === 3) {
-      return ;
+      loveMovie = ;
     } else if (movie.loveCategory === 2) {
-      return ;
+      loveMovie = ;
     } else if (movie.loveCategory === 1) {
-      return ;
+      loveMovie = ;
     }
   });
+  return loveMovie;
 }
 
 // business
