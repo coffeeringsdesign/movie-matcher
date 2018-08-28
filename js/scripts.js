@@ -140,6 +140,10 @@ $(document).ready(function() {
     var happyInput = $("input[id='happyRange']").val();
     console.log(happyInput);
     var sadInput = $("input[id='sadRange']").val();
+      $("#title").text(movieChoice.title);
+      $("#description").text(movieChoice.description);
+      $("#linkLocation").append(movieChoice.link);
+      $("#imgLocation").text(movieChoice.imgFile);
     console.log(sadInput);
     var angstInput = $("input[id='angstRange']").val();
     console.log(angstInput);
@@ -154,5 +158,7 @@ $(document).ready(function() {
     console.log(newMovie.title);
     $("#testText").text(newMovie.title);
   });
+
+
 
 });
