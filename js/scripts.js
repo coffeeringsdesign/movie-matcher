@@ -111,12 +111,14 @@ function sayIfSad(sadInput) {
 //       loveMovie = sleepless; //&& firstDate
 //     } else if (movie.loveCategory === 4) {
 //       loveMovie = crazyStupid;
-    // } else if (movie.loveCategory === 3) {
-    //   loveMovie = ;
-    // } else if (movie.loveCategory === 2) {
-    //   loveMovie = ;
-    // } else if (movie.loveCategory === 1) {
-    //   loveMovie = ;
+
+//     // } else if (movie.loveCategory === 3) {
+//     //   loveMovie = ;
+//     // } else if (movie.loveCategory === 2) {
+//     //   loveMovie = ;
+//     // } else if (movie.loveCategory === 1) {
+//     //   loveMovie = ;
+
 //     }
 //   });
 //   return loveMovie;
@@ -186,7 +188,9 @@ $(document).ready(function() {
     $(".results").show();
 
     var sadInput = $("input[id='sadRange']").val();
-      newMovie = newMovie(sadInput);
+    newMovie = sayIfSad(sadInput);
+
+
 
 // emotions inputs yet to come
     // var happyInput = $("input[id='happyRange']").val();
@@ -198,15 +202,26 @@ $(document).ready(function() {
 
 
 // pushes movie info to card
+
     $("#title").text(newMovie.title);
     $("#description").text(newMovie.description);
     $("#linkLocation").append("<a href='" + newMovie.link + "'>IMDb Profile</a>");
     $("#imageLocation").append("<img class='card-img-top' src='" + newMovie.imgFile + "'>");
+  });
+
+
+    // console.log(sadInput);
+
+    var happyInput = $("input[id='happyRange']").val();
+    var angstInput = $("input[id='angstRange']").val();
+    var loveInput = $("input[id='loveRange']").val();
+
+    var happyResult = sayIfHappy(happyInput);
+    console.log(newMovie.title);
 
     var angstResult = sayIfAngst(angstInput);
     var loveResult = sayIfLove(loveInput);
     $("#testText").text(newMovie.title);
-  });
 
 
 
