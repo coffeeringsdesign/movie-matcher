@@ -11,7 +11,7 @@
 // sad movies
 var titanic = new Movie("Titanic", 0, 5, 0, 0, "img/titanic.jpg", "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.", "https://www.imdb.com/title/tt0120338/");
 var fault = new Movie("Fault In Our Stars", 0, 4, 0, 0, "img/the-fault-in-our-stars.jpg", "Two teenage cancer patients begin a life-affirming journey to visit a reclusive author in Amsterdam.", "https://www.imdb.com/title/tt2582846/");
-var schindlers = new Movie("Schindler's List", 0, 5, 0, 0, "img/schindlers-list.jpg", "In German-occupied Poland during World War II, Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazi Germans.", "https://www.imdb.com/title/tt0108052/");
+// var schindlers = new Movie("Schindler's List", 0, 5, 0, 0, "img/schindlers-list.jpg", "In German-occupied Poland during World War II, Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazi Germans.", "https://www.imdb.com/title/tt0108052/");
 var alice = new Movie("Still Alice", 0, 3, 0, 0, "img/still-alice.jpg", "A linguistics professor and her family find their bonds tested when she is diagnosed with Alzheimer's Disease.", "https://www.imdb.com/title/tt3316960/");
 var coco = new Movie("Coco", 0, 2, 0, 0, "img/coco.jpg", "Aspiring musician Miguel, confronted with his family's ancestral ban on music, enters the Land of the Dead to find his great-great-grandfather, a legendary singer.", "https://www.imdb.com/title/tt2380307");
 var findingNemo = new Movie("Finding Nemo", 0, 1, 0, 0, "img/nemo.jpg", "After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home.", "https://www.imdb.com/title/tt0266543");
@@ -38,7 +38,8 @@ var findingNemo = new Movie("Finding Nemo", 0, 1, 0, 0, "img/nemo.jpg", "After h
 
 // var masterMoviesList = [gilmore, monsters, bridget, amelie, titanic, fault, schindlers, alice, sleepless, firstDate, fiveHundredDays, crazyStupid, kungFu, taken, donnie, fightClub, perksWallflower, tarzan, eternalSunshine, blackPanther, coco, findingNemo, solo, up];
 
-var masterMoviesList = [titanic, fault, schindlers, coco, findingNemo, alice];
+
+var masterMoviesLists = [titanic, fault, coco, findingNemo, alice];
 
 // function sayIfHappy(list) {
 //   var happyMovie = new Movie();
@@ -58,19 +59,27 @@ var masterMoviesList = [titanic, fault, schindlers, coco, findingNemo, alice];
 //   return happyMovie;
 // }
 
-function sayIfSad(input) {
+
+function sayIfSad(sadInput) {
   var sadMovie = new Movie();
-  masterMoviesList.forEach(function(movie) {
+  // console.log(sadInput);
+  masterMoviesLists.forEach(function(movie) {
+    console.log(movie);
     if (movie.sadCategory === 5) {
+      // console.log("titanic!");
       sadMovie = titanic;
       // && schindlers;
     } else if (movie.sadCategory === 4) {
+      // console.log("fault!");
       sadMovie = fault;
     } else if (movie.sadCategory === 3) {
+      // console.log("alice!");
       sadMovie = alice;
     } else if (movie.sadCategory === 2) {
+      // console.log("coco!");
       sadMovie = coco;
     } else if (movie.sadCategory === 1) {
+      // console.log("nemo!");
       sadMovie = findingNemo;
     }
   });
@@ -102,12 +111,14 @@ function sayIfSad(input) {
 //       loveMovie = sleepless; //&& firstDate
 //     } else if (movie.loveCategory === 4) {
 //       loveMovie = crazyStupid;
+
 //     // } else if (movie.loveCategory === 3) {
 //     //   loveMovie = ;
 //     // } else if (movie.loveCategory === 2) {
 //     //   loveMovie = ;
 //     // } else if (movie.loveCategory === 1) {
 //     //   loveMovie = ;
+
 //     }
 //   });
 //   return loveMovie;
@@ -139,7 +150,7 @@ function Movie(title, happyCategory, sadCategory, angstCategory, loveCategory, i
 
 // user interface
 $(document).ready(function() {
-  var newMovie = new Movie(title);
+  // newMovie = new Movie(title, happyCategory, sadCategory, angstCategory, loveCategory, imgFile, description, link);
 
   $("#happyButton").click(function(){
     $(".moodButtons").hide();
@@ -164,8 +175,25 @@ $(document).ready(function() {
     event.preventDefault();
     $(".results").show();
 
+<<<<<<< HEAD
     var sadInput = $("input[id='sadRange']").val();
     newMovie = sayIfSad(sadInput);
+=======
+
+    var sadInput = $("input[id='sadRange']").val();
+      newMovie = newMovie(sadInput);
+
+// emotions inputs yet to come
+    // var happyInput = $("input[id='happyRange']").val();
+    // var angstInput = $("input[id='angstRange']").val();
+    // var loveInput = $("input[id='loveRange']").val();
+
+// emotions outputs yet to come
+    // var happyResult = sayIfHappy(happyInput);
+
+
+// pushes movie info to card
+>>>>>>> 23609f34b132db05b3683fdcdf6fb3324199a3ab
     $("#title").text(newMovie.title);
     $("#description").text(newMovie.description);
     $("#linkLocation").append("<a href='" + newMovie.link + "'>IMDb Profile</a>");
@@ -175,6 +203,7 @@ $(document).ready(function() {
 
     // console.log(sadInput);
 
+<<<<<<< HEAD
     // var happyInput = $("input[id='happyRange']").val();
     // var angstInput = $("input[id='angstRange']").val();
     // var loveInput = $("input[id='loveRange']").val();
@@ -185,6 +214,12 @@ $(document).ready(function() {
     // var angstResult = sayIfAngst(angstInput);
     // var loveResult = sayIfLove(loveInput);
     // $("#testText").text(newMovie.title);
+=======
+    var angstResult = sayIfAngst(angstInput);
+    var loveResult = sayIfLove(loveInput);
+    $("#testText").text(newMovie.title);
+  });
+>>>>>>> 23609f34b132db05b3683fdcdf6fb3324199a3ab
 
 
 
