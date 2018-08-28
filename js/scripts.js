@@ -40,7 +40,8 @@ function sayIfHappy(list) {
 function sayIfSad(list) {
   masterMoviesList.forEach(function(movie) {
     if (movie.sadCategory === 5) {
-      return titanic && schindlers;
+      var movieChoice = titanic;
+      return titanic;
     } else if (movie.sadCategory === 4) {
       return fault;
     } else if (movie.sadCategory === 3) {
@@ -133,11 +134,17 @@ $(document).ready(function() {
     var happyInput = $("input[id='happyRange']").val();
     console.log(happyInput);
     var sadInput = $("input[id='sadRange']").val();
+      $("#title").text(movieChoice.title);
+      $("#description").text(movieChoice.description);
+      $("#linkLocation").append(movieChoice.link);
+      $("#imgLocation").text(movieChoice.imgFile);
     console.log(sadInput);
     var angstInput = $("input[id='angstRange']").val();
     console.log(angstInput);
     var loveInput = $("input[id='loveRange']").val();
     console.log(loveInput);
   });
+
+
 
 });
