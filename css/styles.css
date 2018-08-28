@@ -6,14 +6,14 @@
 
 
 
-#customRange1::-webkit-slider-thumb {
+#happyRange::-webkit-slider-thumb {
   background: #ffc107;
 }
 
-#customRange3::-webkit-slider-thumb {
+#angstRange::-webkit-slider-thumb {
   background: #343a40;
 }
 
-#customRange4::-webkit-slider-thumb {
+#loveRange::-webkit-slider-thumb {
   background: #dc3545;
 }

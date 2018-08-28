@@ -127,8 +127,14 @@ $(document).ready(function() {
 
   $("#sliderForm").submit(function(event) {
     event.preventDefault();
-    var sadInput = $("input[type='range']").val();
+    var happyInput = $("input[id='happyRange']").val();
+    console.log(happyInput);
+    var sadInput = $("input[id='sadRange']").val();
     console.log(sadInput);
+    var angstInput = $("input[id='angstRange']").val();
+    console.log(angstInput);
+    var loveInput = $("input[id='loveRange']").val();
+    console.log(loveInput);
   });
 
 });
