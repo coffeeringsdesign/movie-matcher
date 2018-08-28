@@ -19,7 +19,7 @@ var titanic = new Movie("Titanic", 0, 5, 0, 0, "img/titanic.jpg", "A seventeen-y
 
 // movies et al
 
-// var masterMoviesList = [gilmore, monsters, bridget, amelie, titanic, fault, schindlers, alice, sleepless, firstDate, fiveHundredDays, crazyStupid, kungFu, taken, donnie, fightClub];
+var masterMoviesList = [gilmore, monsters, bridget, amelie, titanic, fault, schindlers, alice, sleepless, firstDate, fiveHundredDays, crazyStupid, kungFu, taken, donnie, fightClub];
 
 function sayIfHappy(list) {
   masterMoviesList.forEach(function(movie) {
@@ -139,8 +139,10 @@ $(document).ready(function() {
     var loveInput = $("input[id='loveRange']").val();
     console.log(loveInput);
 
+    var happyResult = sayIfHappy(happyInput);
     var sadResult = sayIfSad(sadInput);
-    console.log(sadResult);
+    var angstResult = sayIfAngst(angstInput);
+    var loveResult = sayIfLove(loveInput);
   });
 
 });
