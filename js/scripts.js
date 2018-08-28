@@ -141,19 +141,3 @@ $(document).ready(function() {
   });
 
 });
-
-
-    // var moodChoice = ($("input[name='optionsRadios']:checked").val());
-    // // console.log(moodChoice);
-    //
-    //   if (newMovie.mood(moodChoice) === 1) {
-    //     $(".sad").fadeIn();
-    //   } else if (newMovie.mood(moodChoice) === 2) {
-    //     $(".happy").fadeIn();
-    //   } else if (newMovie.mood(moodChoice) === 3) {
-    //     $(".angst").fadeIn();
-    //   } else if (newMovie.mood(moodChoice) === 4) {
-    //     $(".love").fadeIn();
-    //   }
-
-    // var newMovie = new Movie(movieTitle, moodChoice);

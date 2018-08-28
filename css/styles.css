@@ -4,7 +4,9 @@
   vertical-align: top;
 }
 
-
+.results {
+  display: none;
+}
 
 #happyRange::-webkit-slider-thumb {
   background: #ffc107;
