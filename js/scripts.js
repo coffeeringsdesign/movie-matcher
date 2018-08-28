@@ -102,12 +102,12 @@ function sayIfLove(list) {
       loveMovie = sleepless; //&& firstDate
     } else if (movie.loveCategory === 4) {
       loveMovie = crazyStupid;
-    } else if (movie.loveCategory === 3) {
-      loveMovie = ;
-    } else if (movie.loveCategory === 2) {
-      loveMovie = ;
-    } else if (movie.loveCategory === 1) {
-      loveMovie = ;
+    // } else if (movie.loveCategory === 3) {
+    //   loveMovie = ;
+    // } else if (movie.loveCategory === 2) {
+    //   loveMovie = ;
+    // } else if (movie.loveCategory === 1) {
+    //   loveMovie = ;
     }
   });
   return loveMovie;
@@ -142,16 +142,20 @@ $(document).ready(function() {
   var newMovie = new Movie(title);
 
   $("#happyButton").click(function(){
-    $(".happySliders").fadeIn();
+    $(".moodButtons").hide();
+    $("#happySubmit").fadeIn();
   });
   $("#sadButton").click(function(){
-    $(".sadSliders").fadeIn();
+    $(".moodButtons").hide();
+    $("#sadSubmit").fadeIn();
   });
   $("#angstButton").click(function(){
-    $(".angstSliders").fadeIn();
+    $(".moodButtons").hide();
+    $("#angstSubmit").fadeIn();
   });
   $("#loveButton").click(function(){
-    $(".loveSliders").fadeIn();
+    $(".moodButtons").hide();
+    $("#loveSubmit").fadeIn();
   });
 
 

@@ -3,7 +3,9 @@
   margin-top: 30px;
   vertical-align: top;
 }
-
+#happySubmit, #sadSubmit, #angstSubmit, #loveSubmit {
+  display: none;
+}
 .results {
   display: none;
 }
