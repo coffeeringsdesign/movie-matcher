@@ -2,7 +2,7 @@
 // var monsters = new Movie("Monsters Inc", 4, 0, 0, 0, img, "In order to power the city, monsters have to scare children so that they scream.", "https://www.imdb.com/title/tt0198781/");
 // var bridget = new Movie("Bridget Jones's Diary", 4, 0, 0, 0, img, "A British woman is determined to improve herself while she looks for love in a year in which she keeps a personal diary.", "https://www.imdb.com/title/tt0243155/");
 // var amelie = new Movie("Amelie", 3, 0, 0, 0, img, "Amélie is an innocent and naive girl in Paris with her own sense of justice. She decides to help those around her and, along the way, discovers love.", "https://www.imdb.com/title/tt0211915/");
-var titanic = new Movie("Titanic", 0, 5, 0, 0, "img/titanic.jpg", "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.", "https://www.imdb.com/title/tt0120338/");
+var titanic = new Movie("Titanic", 0, 5, 0, 0, "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.", "https://www.imdb.com/title/tt0120338/");
 // var fault = new Movie("Fault In Our Stars", 0, 4, 0, 0, img, "Two teenage cancer patients begin a life-affirming journey to visit a reclusive author in Amsterdam.", "https://www.imdb.com/title/tt2582846/");
 // var schindlers = new Movie("Schindler's List", 0, 5, 0, 0, img, "In German-occupied Poland during World War II, Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazi Germans.", "https://www.imdb.com/title/tt0108052/");
 // var alice = new Movie("Still Alice", 0, 3, 0, 0, img, "A linguistics professor and her family find their bonds tested when she is diagnosed with Alzheimer's Disease.", "https://www.imdb.com/title/tt3316960/");
@@ -19,7 +19,9 @@ var titanic = new Movie("Titanic", 0, 5, 0, 0, "img/titanic.jpg", "A seventeen-y
 
 // movies et al
 
-var masterMoviesList = [gilmore, monsters, bridget, amelie, titanic, fault, schindlers, alice, sleepless, firstDate, fiveHundredDays, crazyStupid, kungFu, taken, donnie, fightClub];
+// var masterMoviesList = [gilmore, monsters, bridget, amelie, titanic, fault, schindlers, alice, sleepless, firstDate, fiveHundredDays, crazyStupid, kungFu, taken, donnie, fightClub];
+
+var masterMoviesList = [titanic];
 
 function sayIfHappy(list) {
   masterMoviesList.forEach(function(movie) {
@@ -40,7 +42,10 @@ function sayIfHappy(list) {
 function sayIfSad(list) {
   masterMoviesList.forEach(function(movie) {
     if (movie.sadCategory === 5) {
-      return titanic && schindlers;
+      console.log("titanic");
+      console.log(titanic);
+      return titanic;
+      // && schindlers;
     } else if (movie.sadCategory === 4) {
       return fault;
     } else if (movie.sadCategory === 3) {
@@ -86,13 +91,13 @@ function sayIfLove(list) {
 }
 
 // business
-function Movie(title, happyCategory, sadCategory, angstCategory, loveCategory, imgFile, description, link) {
+function Movie(title, happyCategory, sadCategory, angstCategory, loveCategory, description, link) {
   this.title = title;
   this.happyCategory = happyCategory;
   this.sadCategory = sadCategory;
   this.angstCategory = angstCategory;
   this.loveCategory = loveCategory;
-  this.imgFile = imgFile;
+  // this.imgFile = imgFile;
   this.description = description;
   this.link = link;
 }
@@ -111,7 +116,7 @@ function Movie(title, happyCategory, sadCategory, angstCategory, loveCategory, i
 
 // user interface
 $(document).ready(function() {
-  var newMovie = new Movie("title", "category");
+  var newMovie = new Movie(title);
 
   $("#happyButton").click(function(){
     $(".happySliders").fadeIn();
@@ -130,6 +135,8 @@ $(document).ready(function() {
 
   $("#sliderForm").submit(function(event) {
     event.preventDefault();
+    $(".results").show();
+
     var happyInput = $("input[id='happyRange']").val();
     console.log(happyInput);
     var sadInput = $("input[id='sadRange']").val();
@@ -139,10 +146,13 @@ $(document).ready(function() {
     var loveInput = $("input[id='loveRange']").val();
     console.log(loveInput);
 
-    var happyResult = sayIfHappy(happyInput);
+    // var happyResult = sayIfHappy(happyInput);
     var sadResult = sayIfSad(sadInput);
-    var angstResult = sayIfAngst(angstInput);
-    var loveResult = sayIfLove(loveInput);
+    // var angstResult = sayIfAngst(angstInput);
+    // var loveResult = sayIfLove(loveInput);
+
+    console.log(newMovie.title);
+    $("#testText").text(newMovie.title);
   });
 
 });
