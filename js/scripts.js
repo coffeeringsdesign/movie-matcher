@@ -135,6 +135,9 @@ $(document).ready(function() {
     console.log(angstInput);
     var loveInput = $("input[id='loveRange']").val();
     console.log(loveInput);
+
+    var sadResult = sayIfSad(sadInput);
+    console.log(sadResult);
   });
 
 });
