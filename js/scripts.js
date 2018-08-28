@@ -61,29 +61,29 @@ var masterMoviesLists = [titanic, fault, coco, findingNemo, alice];
 
 
 function sayIfSad(sadInput) {
-  var sadMovie = new Movie();
+  var newMovie = new Movie();
   // console.log(sadInput);
   masterMoviesLists.forEach(function(movie) {
     console.log(movie);
     if (movie.sadCategory === 5) {
       // console.log("titanic!");
-      sadMovie = titanic;
+      newMovie = titanic;
       // && schindlers;
     } else if (movie.sadCategory === 4) {
       // console.log("fault!");
-      sadMovie = fault;
+      newMovie = fault;
     } else if (movie.sadCategory === 3) {
       // console.log("alice!");
-      sadMovie = alice;
+      newMovie = alice;
     } else if (movie.sadCategory === 2) {
       // console.log("coco!");
-      sadMovie = coco;
+      newMovie = coco;
     } else if (movie.sadCategory === 1) {
       // console.log("nemo!");
-      sadMovie = findingNemo;
+      newMovie = findingNemo;
     }
   });
-  return sadMovie;
+  return newMovie;
 }
 //
 // function sayIfAngst(list) {
@@ -150,6 +150,7 @@ function Movie(title, happyCategory, sadCategory, angstCategory, loveCategory, i
 $(document).ready(function() {
   // newMovie = new Movie(title, happyCategory, sadCategory, angstCategory, loveCategory, imgFile, description, link);
 
+// buttons to show radios to rank emotions
   $("#happyButton").click(function(){
     $(".moodButtons").hide();
     $("#happySubmit").fadeIn();
@@ -167,12 +168,22 @@ $(document).ready(function() {
     $("#loveSubmit").fadeIn();
   });
 
-
-
+// submit functions for each emotions
+  $("#happySubmit").submit(function(event) {
+    event.preventDefault();
+    $(".results").show();
+  });
+  $("#angstSubmit").submit(function(event) {
+    event.preventDefault();
+    $(".results").show();
+  });
+  $("#loveSubmit").submit(function(event) {
+    event.preventDefault();
+    $(".results").show();
+  });
   $("#sadSubmit").submit(function(event) {
     event.preventDefault();
     $(".results").show();
-
 
     var sadInput = $("input[id='sadRange']").val();
       newMovie = newMovie(sadInput);
