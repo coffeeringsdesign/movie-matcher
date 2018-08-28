@@ -10,11 +10,11 @@
 
 // sad movies
 var titanic = new Movie("Titanic", 0, 5, 0, 0, "img/titanic.jpg", "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.", "https://www.imdb.com/title/tt0120338/");
-// var fault = new Movie("Fault In Our Stars", 0, 4, 0, 0, img, "Two teenage cancer patients begin a life-affirming journey to visit a reclusive author in Amsterdam.", "https://www.imdb.com/title/tt2582846/");
-// var schindlers = new Movie("Schindler's List", 0, 5, 0, 0, img, "In German-occupied Poland during World War II, Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazi Germans.", "https://www.imdb.com/title/tt0108052/");
-// var alice = new Movie("Still Alice", 0, 3, 0, 0, img, "A linguistics professor and her family find their bonds tested when she is diagnosed with Alzheimer's Disease.", "https://www.imdb.com/title/tt3316960/");
-// var coco = new Movie("Coco", 0, 2, 0, 0, img, "Aspiring musician Miguel, confronted with his family's ancestral ban on music, enters the Land of the Dead to find his great-great-grandfather, a legendary singer.", "https://www.imdb.com/title/tt2380307");
-// var findingNemo = new Movie("Finding Nemo", 0, 1, 0, 0, img, "After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home.", "https://www.imdb.com/title/tt0266543");
+var fault = new Movie("Fault In Our Stars", 0, 4, 0, 0, "img/the-fault-in-our-stars.jpg", "Two teenage cancer patients begin a life-affirming journey to visit a reclusive author in Amsterdam.", "https://www.imdb.com/title/tt2582846/");
+var schindlers = new Movie("Schindler's List", 0, 5, 0, 0, "img/schindlers-list.jpg", "In German-occupied Poland during World War II, Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazi Germans.", "https://www.imdb.com/title/tt0108052/");
+var alice = new Movie("Still Alice", 0, 3, 0, 0, "img/still-alice.jpg", "A linguistics professor and her family find their bonds tested when she is diagnosed with Alzheimer's Disease.", "https://www.imdb.com/title/tt3316960/");
+var coco = new Movie("Coco", 0, 2, 0, 0, "img/coco.jpg", "Aspiring musician Miguel, confronted with his family's ancestral ban on music, enters the Land of the Dead to find his great-great-grandfather, a legendary singer.", "https://www.imdb.com/title/tt2380307");
+var findingNemo = new Movie("Finding Nemo", 0, 1, 0, 0, "img/nemo.jpg", "After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home.", "https://www.imdb.com/title/tt0266543");
 
 // love movies
 // var sleepless = new Movie("Sleepless In Seattle", 0, 0, 0, 5, img, "A recently widowed man's son calls a radio talk-show in an attempt to find his father a partner.", "https://www.imdb.com/title/tt0108160/");
@@ -38,7 +38,7 @@ var titanic = new Movie("Titanic", 0, 5, 0, 0, "img/titanic.jpg", "A seventeen-y
 
 // var masterMoviesList = [gilmore, monsters, bridget, amelie, titanic, fault, schindlers, alice, sleepless, firstDate, fiveHundredDays, crazyStupid, kungFu, taken, donnie, fightClub, perksWallflower, tarzan, eternalSunshine, blackPanther, coco, findingNemo, solo, up];
 
-var masterMoviesList = [titanic];
+var masterMoviesList = [titanic, fault, schindlers, coco, findingNemo, alice];
 
 function sayIfHappy(list) {
   masterMoviesList.forEach(function(movie) {
@@ -163,11 +163,12 @@ $(document).ready(function() {
 
     var happyResult = sayIfHappy(happyInput);
     newMovie = sayIfSad(sadInput);
-    console.log(newMovie.title);
-      $("#title").text(newMovie.title);
-      // $("#description").text(movieChoice.description);
-      // $("#linkLocation").append(movieChoice.link);
-      // $("#imgLocation").text(movieChoice.imgFile);
+    // console.log(newMovie.title);
+    $("#title").text(newMovie.title);
+    $("#description").text(newMovie.description);
+    $("#linkLocation").append("<a href='" + newMovie.link + "'>IMDb Profile</a>");
+    $("#imageLocation").append("<img class='card-img-top' src='" + newMovie.imgFile + "'>");
+
     var angstResult = sayIfAngst(angstInput);
     var loveResult = sayIfLove(loveInput);
     // $("#testText").text(newMovie.title);
