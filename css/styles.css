@@ -21,3 +21,7 @@
 #loveRange::-webkit-slider-thumb {
   background: #dc3545;
 }
+
+.pull-right {
+  float: right;
+}

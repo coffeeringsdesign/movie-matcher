@@ -10,7 +10,7 @@ var solo = new Movie("Solo", 1, 0, 0, 0, "img/solo.jpg", "During an adventure in
 
 // sad movies
 var titanic = new Movie("Titanic", 0, 5, 0, 0, "img/titanic.jpg", "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.", "https://www.imdb.com/title/tt0120338/");
-var fault = new Movie("Fault In Our Stars", 0, 4, 0, 0, "img/the-fault-in-our-stars.jpg", "Two teenage cancer patients begin a life-affirming journey to visit a reclusive author in Amsterdam.", "https://www.imdb.com/title/tt2582846/");
+var fault = new Movie("The Fault In Our Stars", 0, 4, 0, 0, "img/the-fault-in-our-stars.jpg", "Two teenage cancer patients begin a life-affirming journey to visit a reclusive author in Amsterdam.", "https://www.imdb.com/title/tt2582846/");
 var schindlers = new Movie("Schindler's List", 0, 5, 0, 0, "img/schindlers-list.jpg", "In German-occupied Poland during World War II, Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazi Germans.", "https://www.imdb.com/title/tt0108052/");
 var alice = new Movie("Still Alice", 0, 3, 0, 0, "img/still-alice.jpg", "A linguistics professor and her family find their bonds tested when she is diagnosed with Alzheimer's Disease.", "https://www.imdb.com/title/tt3316960/");
 var coco = new Movie("Coco", 0, 2, 0, 0, "img/coco.jpg", "Aspiring musician Miguel, confronted with his family's ancestral ban on music, enters the Land of the Dead to find his great-great-grandfather, a legendary singer.", "https://www.imdb.com/title/tt2380307");
@@ -271,13 +271,14 @@ $(document).ready(function() {
 
     var sadInput = parseInt($("input[name='sadRange']").val());
     sayIfSad(sadInput, movieResults);
-    console.log(movieResults);
 
     for (var i = 0; i <= movieResults.length; i++) {
       var titleId = "title" + i;
       var imgId = "img" + i;
       var descId = "desc" + i;
       var linkId = "link" + i;
+
+      console.log(movieResults);
 
       $(".cardCode").html(
         "<div class='card showMovie' style='width: 18rem;' value='MOOD'>" +
@@ -289,10 +290,13 @@ $(document).ready(function() {
         "</div></div>"
       );
 
-        $(".titleSpace").text(titleId);
-        $(".descSpace").text(descId);
-        $(".linkSpace").html("<a href='" + linkId + "'>IMDb Profile</a>");
-        $(".imgSpace").html("<img class='card-img-top' src='" + imgId + "'>");
+      var titleIdInsert = '#' + titleId;
+      console.log(titleIdInsert);
+
+        $("h5").text((movieResults.find(sayIfSad)).title);
+        $(".descSpace").text((movieResults.find(sayIfSad)).description);
+        $(".linkSpace").html("<a href='" + ((movieResults.find(sayIfSad)).link) + "'>IMDb Profile</a>");
+        $(".imgSpace").html("<img class='card-img-top' src='" + ((movieResults.find(sayIfSad)).imgFile) + "'>");
       }
 
     });
