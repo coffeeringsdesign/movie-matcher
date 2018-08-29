@@ -161,6 +161,7 @@ $(document).ready(function() {
     event.preventDefault();
     $(".results").show();
     $("#happySubmitbtn").hide();
+    $("#happySubmit").hide();
     $(".refresh").show();
 
     var movieResults = [];
@@ -202,6 +203,7 @@ $(document).ready(function() {
     event.preventDefault();
     $(".results").show();
     $("#angstSubmitbtn").hide();
+    $("#angstSubmit").hide();
     $(".refresh").show();
 
     var movieResults = [];
@@ -241,6 +243,7 @@ $(document).ready(function() {
     event.preventDefault();
     $(".results").show();
     $("#loveSubmitbtn").hide();
+    $("#loveSubmit").hide();
     $(".refresh").show();
 
     var movieResults = [];
@@ -281,6 +284,7 @@ $(document).ready(function() {
     event.preventDefault();
     $(".results").show();
     $("#sadSubmitbtn").hide();
+    $("#sadSubmit").hide();
     $(".refresh").show();
 
     var movieResults = [];
