@@ -64,23 +64,23 @@ function sayIfSad(sadInput) {
   var newMovie = new Movie();
   // console.log(sadInput);
   masterMoviesLists.forEach(function(movie) {
-    console.log(movie);
-    if (movie.sadCategory === 5) {
+    console.log(sadInput);
+    if (movie.sadCategory === 5 && sadInput === 5) {
       // console.log("titanic!");
       newMovie = titanic;
-      // && schindlers;
-    } else if (movie.sadCategory === 4) {
+    } else if (movie.sadCategory === 4  && sadInput === 4) {
       // console.log("fault!");
       newMovie = fault;
-    } else if (movie.sadCategory === 3) {
+    } else if (movie.sadCategory === 3  && sadInput === 3) {
       // console.log("alice!");
       newMovie = alice;
-    } else if (movie.sadCategory === 2) {
+    } else if (movie.sadCategory === 2  && sadInput === 2) {
       // console.log("coco!");
       newMovie = coco;
-    } else if (movie.sadCategory === 1) {
+    } else if (movie.sadCategory === 1  && sadInput === 1) {
       // console.log("nemo!");
       newMovie = findingNemo;
+      console.log(newMovie);
     }
   });
   return newMovie;
@@ -125,7 +125,7 @@ function sayIfSad(sadInput) {
 // }
 
 // business
-function Movie(title, happyCategory, sadCategory, angstCategory, loveCategory, imgFile, description, link) {
+function Movie(title, happyCategory, sadCategory, angstCategory, loveCategory, imgFile, description, link, slider) {
   this.title = title;
   this.happyCategory = happyCategory;
   this.sadCategory = sadCategory;
@@ -187,7 +187,8 @@ $(document).ready(function() {
     event.preventDefault();
     $(".results").show();
 
-    var sadInput = $("input[id='sadRange']").val();
+    var sadInput = parseInt($("input[name='sadMood']:checked").val());
+    console.log(sadInput);
     newMovie = sayIfSad(sadInput);
 
 
@@ -209,19 +210,18 @@ $(document).ready(function() {
     $("#imageLocation").append("<img class='card-img-top' src='" + newMovie.imgFile + "'>");
   });
 
-
     // console.log(sadInput);
 
-    var happyInput = $("input[id='happyRange']").val();
-    var angstInput = $("input[id='angstRange']").val();
-    var loveInput = $("input[id='loveRange']").val();
-
-    var happyResult = sayIfHappy(happyInput);
-    console.log(newMovie.title);
-
-    var angstResult = sayIfAngst(angstInput);
-    var loveResult = sayIfLove(loveInput);
-    $("#testText").text(newMovie.title);
+    // var happyInput = $("input[id='happyRange']").val();
+    // var angstInput = $("input[id='angstRange']").val();
+    // var loveInput = $("input[id='loveRange']").val();
+    //
+    // var happyResult = sayIfHappy(happyInput);
+    // console.log(newMovie.title);
+    //
+    // var angstResult = sayIfAngst(angstInput);
+    // var loveResult = sayIfLove(loveInput);
+    // $("#testText").text(newMovie.title);
 
 
 
