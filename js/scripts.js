@@ -51,7 +51,7 @@ var hiddenFigures = new Movie("Hidden Figures", 3, 2, 4, 2, "img/hidden-figures.
 var arrival = new Movie("Arrival", 2, 1, 3, 2, "img/arrival.jpg", "A linguist is recruited by the military to communicate with alien lifeforms after twelve mysterious spacecrafts land around the world.", "https://www.imdb.com/title/tt2543164");
 var profMarston = new Movie("Professor Marston and the Wonder Women", 3, 1, 3, 5, "img/prof-marston.jpg", "The story of psychologist William Moulton Marston, and his polyamorous relationship with his wife and their mistress who would inspire his creation of the superheroine, Wonder Woman.", "https://www.imdb.com/title/tt6133130");
 
-var masterMoviesLists = [schindlers, titanic, fault, coco, findingNemo, alice, gilmore, monsters, amelie, up, solo, kungFu, taken, fightClub, tarzan, perksWallflower, sleepless, fiveHundredDays, crazyStupid, blackPanther, eternalSunshine];
+var masterMoviesLists = [schindlers, titanic, fault, coco, findingNemo, alice, gilmore, monsters, amelie, up, solo, kungFu, taken, fightClub, tarzan, perksWallflower, sleepless, fiveHundredDays, crazyStupid, blackPanther, eternalSunshine, theMan, emperor, forrest, future, lionKing, soundOf, homeAlone, shrek, tenThings, loveActually, clueless, grease, prada, starWars, meetJoeBlack, departed, hook, leagueofTheirOwn, iamLegend, getOut, aQuietPlace, rbg, wonderWoman, notebook, theProfessional, hiddenFigures, arrival, profMarston];
 
 function sayIfHappy(happyInput, movieResults) {
   var newMovie = new Movie();
