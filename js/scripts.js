@@ -151,7 +151,7 @@ $(document).ready(function() {
     var movieResults = [];
 
     var happyInput = parseInt($("input[name='happyRange']").val());
-    sayIfSad(happyInput, movieResults);
+    sayIfHappy(happyInput, movieResults);
 
     for (var i = 0; i < movieResults.length; i++) {
       var titleId = "title" + i;
@@ -181,7 +181,7 @@ $(document).ready(function() {
         $(titleIdInsert).text(currentMovie.title);
         $(descIdInsert).text(currentMovie.description);
         $(linkIdInsert).html("<a href='" + (currentMovie.link) + "'>IMDb Profile</a>");
-        $(linkIdInsert).html("<img class='card-img-top' src='" + (currentMovie.imgFile) + "'>");
+        $(imgIdInsert).html("<img class='card-img-top' src='" + (currentMovie.imgFile) + "'>");
 
     };
   });
@@ -196,7 +196,7 @@ $(document).ready(function() {
     var movieResults = [];
 
     var angstInput = parseInt($("input[name='angstRange']").val());
-    sayIfSad(angstInput, movieResults);
+    sayIfAngst(angstInput, movieResults);
 
     for (var i = 0; i < movieResults.length; i++) {
       var titleId = "title" + i;
@@ -226,7 +226,7 @@ $(document).ready(function() {
         $(titleIdInsert).text(currentMovie.title);
         $(descIdInsert).text(currentMovie.description);
         $(linkIdInsert).html("<a href='" + (currentMovie.link) + "'>IMDb Profile</a>");
-        $(linkIdInsert).html("<img class='card-img-top' src='" + (currentMovie.imgFile) + "'>");
+        $(imgIdInsert).html("<img class='card-img-top' src='" + (currentMovie.imgFile) + "'>");
 
     };
   });
@@ -241,7 +241,7 @@ $(document).ready(function() {
     var movieResults = [];
 
     var loveInput = parseInt($("input[name='loveRange']").val());
-    sayIfSad(loveInput, movieResults);
+    sayIfLove(loveInput, movieResults);
 
     for (var i = 0; i < movieResults.length; i++) {
       var titleId = "title" + i;
@@ -271,7 +271,7 @@ $(document).ready(function() {
         $(titleIdInsert).text(currentMovie.title);
         $(descIdInsert).text(currentMovie.description);
         $(linkIdInsert).html("<a href='" + (currentMovie.link) + "'>IMDb Profile</a>");
-        $(linkIdInsert).html("<img class='card-img-top' src='" + (currentMovie.imgFile) + "'>");
+        $(imgIdInsert).html("<img class='card-img-top' src='" + (currentMovie.imgFile) + "'>");
 
     };
   });
@@ -317,7 +317,7 @@ $(document).ready(function() {
         $(titleIdInsert).text(currentMovie.title);
         $(descIdInsert).text(currentMovie.description);
         $(linkIdInsert).html("<a href='" + (currentMovie.link) + "'>IMDb Profile</a>");
-        $(linkIdInsert).html("<img class='card-img-top' src='" + (currentMovie.imgFile) + "'>");
+        $(imgIdInsert).html("<img class='card-img-top' src='" + (currentMovie.imgFile) + "'>");
 
     };
   });
