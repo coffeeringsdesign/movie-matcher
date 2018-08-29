@@ -62,29 +62,35 @@ function sayIfHappy(happyInput) {
 }
 
 
-function sayIfSad(sadInput) {
-  var newMovie = new Movie();
+function sayIfSad(sadInput, movieResults) {
+  var newMovie = new Movie(); //try to comment out later
   // console.log(sadInput);
+
   masterMoviesLists.forEach(function(movie) {
-    console.log(sadInput);
+    // var movieResults = [];
     if (movie.sadCategory === 5 && sadInput === 5) {
       // console.log("titanic!");
-      newMovie = schindlers && titanic;
+      movieResults.push(titanic, schindlers);
+      // return;
     } else if (movie.sadCategory === 4  && sadInput === 4) {
       // console.log("fault!");
-      newMovie = fault;
+      movieResults.push(fault);
+      // return;
     } else if (movie.sadCategory === 3  && sadInput === 3) {
       // console.log("alice!");
-      newMovie = alice;
+      movieResults.push(alice);
+      // return;
     } else if (movie.sadCategory === 2  && sadInput === 2) {
       // console.log("coco!");
-      newMovie = coco;
+      movieResults.push(coco);
+      // return;
     } else if (movie.sadCategory === 1  && sadInput === 1) {
       // console.log("nemo!");
-      newMovie = findingNemo;
-      console.log(newMovie);
+      movieResults.push(findingNemo);
+      // return;
     }
   });
+  // console.log(movieResults);
   return newMovie;
 }
 //
@@ -183,76 +189,76 @@ $(document).ready(function() {
   });
 
 // submit functions for each emotions
-  $("#happySubmit").submit(function(event) {
-    event.preventDefault();
-    $(".results").show();
-
-    var happyInput = parseInt($("input[name='happyRange']").val());
-    newMovie = sayIfHappy(happyInput);
-
-    $(".cardCode").html(
-      "<div class='card showMovie' style='width: 18rem;' value='MOOD'>" +
-      "<div class='card-body'>" +
-      "<span id='imageLocation'></span>" +
-      "<h5 class='card-title' id='title'><span id='testText'></span></h5>" +
-      "<p class='card-text' id='description'></p>" +
-      "<p id='linkLocation'></p>" +
-      "</div></div>"
-    );
-
-    $("#title").text(newMovie.title);
-    $("#description").text(newMovie.description);
-    $("#linkLocation").html("<a href='" + newMovie.link + "'>IMDb Profile</a>");
-    $("#imageLocation").html("<img class='card-img-top' src='" + newMovie.imgFile + "'>");
-  });
-
-
-  $("#angstSubmit").submit(function(event) {
-    event.preventDefault();
-    $(".results").show();
-
-    var angstInput = parseInt($("input[name='angstRange']").val());
-    newMovie = sayIfAngst(angstInput);
-
-    $(".cardCode").html(
-      "<div class='card showMovie' style='width: 18rem;' value='MOOD'>" +
-      "<div class='card-body'>" +
-      "<span id='imageLocation'></span>" +
-      "<h5 class='card-title' id='title'><span id='testText'></span></h5>" +
-      "<p class='card-text' id='description'></p>" +
-      "<p id='linkLocation'></p>" +
-      "</div></div>"
-    );
-
-    $("#title").text(newMovie.title);
-    $("#description").text(newMovie.description);
-    $("#linkLocation").html("<a href='" + newMovie.link + "'>IMDb Profile</a>");
-    $("#imageLocation").html("<img class='card-img-top' src='" + newMovie.imgFile + "'>");
-  });
-
-
-  $("#loveSubmit").submit(function(event) {
-    event.preventDefault();
-    $(".results").show();
-
-    var loveInput = parseInt($("input[name='loveRange']").val());
-    newMovie = sayIfLove(loveInput);
-
-    $(".cardCode").html(
-      "<div class='card showMovie' style='width: 18rem;' value='MOOD'>" +
-      "<div class='card-body'>" +
-      "<span id='imageLocation'></span>" +
-      "<h5 class='card-title' id='title'><span id='testText'></span></h5>" +
-      "<p class='card-text' id='description'></p>" +
-      "<p id='linkLocation'></p>" +
-      "</div></div>"
-    );
-
-    $("#title").text(newMovie.title);
-    $("#description").text(newMovie.description);
-    $("#linkLocation").html("<a href='" + newMovie.link + "'>IMDb Profile</a>");
-    $("#imageLocation").html("<img class='card-img-top' src='" + newMovie.imgFile + "'>");
-  });
+  // $("#happySubmit").submit(function(event) {
+  //   event.preventDefault();
+  //   $(".results").show();
+  //
+  //   var happyInput = parseInt($("input[name='happyRange']").val());
+  //   newMovie = sayIfHappy(happyInput);
+  //
+  //   $(".cardCode").html(
+  //     "<div class='card showMovie' style='width: 18rem;' value='MOOD'>" +
+  //     "<div class='card-body'>" +
+  //     "<span id='imageLocation'></span>" +
+  //     "<h5 class='card-title' id='title'><span id='testText'></span></h5>" +
+  //     "<p class='card-text' id='description'></p>" +
+  //     "<p id='linkLocation'></p>" +
+  //     "</div></div>"
+  //   );
+  //
+  //   $("#title").text(newMovie.title);
+  //   $("#description").text(newMovie.description);
+  //   $("#linkLocation").html("<a href='" + newMovie.link + "'>IMDb Profile</a>");
+  //   $("#imageLocation").html("<img class='card-img-top' src='" + newMovie.imgFile + "'>");
+  // });
+  //
+  //
+  // $("#angstSubmit").submit(function(event) {
+  //   event.preventDefault();
+  //   $(".results").show();
+  //
+  //   var angstInput = parseInt($("input[name='angstRange']").val());
+  //   newMovie = sayIfAngst(angstInput);
+  //
+  //   $(".cardCode").html(
+  //     "<div class='card showMovie' style='width: 18rem;' value='MOOD'>" +
+  //     "<div class='card-body'>" +
+  //     "<span id='imageLocation'></span>" +
+  //     "<h5 class='card-title' id='title'><span id='testText'></span></h5>" +
+  //     "<p class='card-text' id='description'></p>" +
+  //     "<p id='linkLocation'></p>" +
+  //     "</div></div>"
+  //   );
+  //
+  //   $("#title").text(newMovie.title);
+  //   $("#description").text(newMovie.description);
+  //   $("#linkLocation").html("<a href='" + newMovie.link + "'>IMDb Profile</a>");
+  //   $("#imageLocation").html("<img class='card-img-top' src='" + newMovie.imgFile + "'>");
+  // });
+  //
+  //
+  // $("#loveSubmit").submit(function(event) {
+  //   event.preventDefault();
+  //   $(".results").show();
+  //
+  //   var loveInput = parseInt($("input[name='loveRange']").val());
+  //   newMovie = sayIfLove(loveInput);
+  //
+  //   $(".cardCode").html(
+  //     "<div class='card showMovie' style='width: 18rem;' value='MOOD'>" +
+  //     "<div class='card-body'>" +
+  //     "<span id='imageLocation'></span>" +
+  //     "<h5 class='card-title' id='title'><span id='testText'></span></h5>" +
+  //     "<p class='card-text' id='description'></p>" +
+  //     "<p id='linkLocation'></p>" +
+  //     "</div></div>"
+  //   );
+  //
+  //   $("#title").text(newMovie.title);
+  //   $("#description").text(newMovie.description);
+  //   $("#linkLocation").html("<a href='" + newMovie.link + "'>IMDb Profile</a>");
+  //   $("#imageLocation").html("<img class='card-img-top' src='" + newMovie.imgFile + "'>");
+  // });
 
 
 
@@ -261,28 +267,52 @@ $(document).ready(function() {
     // $(".results").hide();
     $(".results").show();
 
+    var movieResults = [];
+
     var sadInput = parseInt($("input[name='sadRange']").val());
-    console.log(sadInput);
-    newMovie = sayIfSad(sadInput);
+    sayIfSad(sadInput, movieResults);
+    console.log(movieResults);
 
-    // if (newMovie > 1) {
-    //
-    // }
-    $(".cardCode").html(
-      "<div class='card showMovie' style='width: 18rem;' value='MOOD'>" +
-      "<div class='card-body'>" +
-      "<span id='imageLocation'></span>" +
-      "<h5 class='card-title' id='title'><span id='testText'></span></h5>" +
-      "<p class='card-text' id='description'></p>" +
-      "<p id='linkLocation'></p>" +
-      "</div></div>"
-    );
+    for (var i = 0; i <= movieResults.length; i++) {
+      var titleId = "title" + i;
+      var imgId = "img" + i;
+      var descId = "desc" + i;
+      var linkId = "link" + i;
 
-    $("#title").text(newMovie.title);
-    $("#description").text(newMovie.description);
-    $("#linkLocation").html("<a href='" + newMovie.link + "'>IMDb Profile</a>");
-    $("#imageLocation").html("<img class='card-img-top' src='" + newMovie.imgFile + "'>");
+      $(".cardCode").html(
+        "<div class='card showMovie' style='width: 18rem;' value='MOOD'>" +
+        "<div class='card-body'>" +
+        "<span class='imgSpace' id='" + imgId + "'></span>" +
+        "<h5 class='card-title titleSpace' id='" + titleId + "'><span id='testText'></span></h5>" +
+        "<p class='card-text descSpace' id='" + descId + "'></p>" +
+        "<p class='linkSpace' id='" + linkId + "'></p>" +
+        "</div></div>"
+      );
+
+        $(".titleSpace").text(titleId);
+        $(".descSpace").text(descId);
+        $(".linkSpace").html("<a href='" + linkId + "'>IMDb Profile</a>");
+        $(".imgSpace").html("<img class='card-img-top' src='" + imgId + "'>");
+      }
+
+    });
   });
+
+    // $(".cardCode").html(
+    //   "<div class='card showMovie' style='width: 18rem;' value='MOOD'>" +
+    //   "<div class='card-body'>" +
+    //   "<span id='imageLocation'></span>" +
+    //   "<h5 class='card-title' id='title'><span id='testText'></span></h5>" +
+    //   "<p class='card-text' id='description'></p>" +
+    //   "<p id='linkLocation'></p>" +
+    //   "</div></div>"
+    // );
+    //
+    // $("#title").text(newMovie.title);
+    // $("#description").text(newMovie.description);
+    // $("#linkLocation").html("<a href='" + newMovie.link + "'>IMDb Profile</a>");
+    // $("#imageLocation").html("<img class='card-img-top' src='" + newMovie.imgFile + "'>");
+  // });
 
     // console.log(sadInput);
 
@@ -296,7 +326,3 @@ $(document).ready(function() {
     // var angstResult = sayIfAngst(angstInput);
     // var loveResult = sayIfLove(loveInput);
     // $("#testText").text(newMovie.title);
-
-
-
-});
