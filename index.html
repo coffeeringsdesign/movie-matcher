@@ -20,76 +20,49 @@
       <button type="submit" class="btn btn-dark" id="angstButton">Angst</button>
       <button type="submit" class="btn btn-danger" id="loveButton">Love</button>
     </div>
+
+
     <form id="happySubmit">
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="happyMood" id="happiness1" value="1">
-        <label class="form-check-label" for="happyMood">1</label>
-        <input class="form-check-input" type="radio" name="happyMood" id="happiness2" value="2">
-        <label class="form-check-label" for="happyMood">2</label>
-        <input class="form-check-input" type="radio" name="happyMood" id="happiness3" value="3">
-        <label class="form-check-label" for="happyMood">3</label>
-        <input class="form-check-input" type="radio" name="happyMood" id="happiness4" value="4">
-        <label class="form-check-label" for="happyMood">4</label>
-        <input class="form-check-input" type="radio" name="happyMood" id="happiness5" value="5">
-        <label class="form-check-label" for="happyMood">5</label>
-      </div>
+      <input name="happyRange" type="range" class="custom-range happySliders" min="1" max="5" step="1" id="happyRange">
+      <label class="pull-left happySliders" for="happyRange">Barely Happy</label>
+      <label class="pull-right happySliders" for="happyRange">Happiest</label>
+      <div>
       <button type="submit" class="btn btn-warning">Submit</button>
+      </div>
     </form>
+
     <form id="sadSubmit">
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="sadMood" id="sadness1" value="1">
-        <label class="form-check-label" for="sadMood">1</label>
-        <input class="form-check-input" type="radio" name="sadMood" id="sadness2" value="2">
-        <label class="form-check-label" for="sadMood">2</label>
-        <input class="form-check-input" type="radio" name="sadMood" id="sadness3" value="3">
-        <label class="form-check-label" for="sadMood">3</label>
-        <input class="form-check-input" type="radio" name="sadMood" id="sadness4" value="4">
-        <label class="form-check-label" for="sadMood">4</label>
-        <input class="form-check-input" type="radio" name="sadMood" id="sadness5" value="5">
-        <label class="form-check-label" for="sadMood">5</label>
-      </div>
+      <input name="sadRange" type="range" class="custom-range sadSliders" min="1" max="5" step="1" id="sadRange">
+      <label class="pull-left sadSliders" for="sadRange">Tiny Bit Sad</label>
+      <label class="pull-right sadSliders" for="sadRange">Weeping</label>
+      <div>
       <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
     </form>
+
     <form id="angstSubmit">
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="angstMood" id="angst1" value="1">
-        <label class="form-check-label" for="angstMood">1</label>
-        <input class="form-check-input" type="radio" name="angstMood" id="angst2" value="2">
-        <label class="form-check-label" for="angstMood">2</label>
-        <input class="form-check-input" type="radio" name="angstMood" id="angst3" value="3">
-        <label class="form-check-label" for="angstMood">3</label>
-        <input class="form-check-input" type="radio" name="angstMood" id="angst4" value="4">
-        <label class="form-check-label" for="angstMood">4</label>
-        <input class="form-check-input" type="radio" name="angstMood" id="angst5" value="5">
-        <label class="form-check-label" for="angstMood">5</label>
-      </div>
-      <button type="submit" class="btn btn-dark">Submit</button>
-    </form>
-    <form id="loveSubmit">
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="loveMood" id="love1" value="1">
-        <label class="form-check-label" for="loveMood">1</label>
-        <input class="form-check-input" type="radio" name="loveMood" id="love2" value="2">
-        <label class="form-check-label" for="loveMood">2</label>
-        <input class="form-check-input" type="radio" name="loveMood" id="love3" value="3">
-        <label class="form-check-label" for="loveMood">3</label>
-        <input class="form-check-input" type="radio" name="loveMood" id="love4" value="4">
-        <label class="form-check-label" for="loveMood">4</label>
-        <input class="form-check-input" type="radio" name="loveMood" id="love5" value="5">
-        <label class="form-check-label" for="loveMood">5</label>
-      </div>
-      <button type="submit" class="btn btn-danger">Submit</button>
-    </form>
+       <input name="angstRange" type="range" class="custom-range angstSliders" min="1" max="5" step="1" id="angstRange">
+       <label class="pull-left angstSliders" for="angstRange">Teensy Angsty</label>
+       <label class="pull-right angstSliders" for="angstRange">Freaking Out</label>
+       <div>
+       <button type="submit" class="btn btn-dark">Submit</button>
+       </div>
+     </form>
+
+     <form id="loveSubmit">
+       <input name="loveRange" type="range" class="custom-range loveSliders" min="1" max="5" step="1" id="loveRange">
+       <label class="pull-left loveSliders" for="loveRange">Small Crush</label>
+       <label class="pull-right loveSliders" for="loveRange">My Soulmate</label>
+       <div>
+       <button type="submit" class="btn btn-danger">Submit</button>
+       </div>
+     </form>
+
     <div class="results">
-      <div class="card showMovie" style="width: 18rem;" value="MOOD">
-        <div class="card-body">
-          <span id="imageLocation"></span>
-          <h5 class="card-title" id="title"><span id="testText"></span></h5>
-          <p class="card-text" id="description"></p>
-          <p id="linkLocation"></p>
-          <!-- <a class="card-link">IMDb Profile</a> -->
+      <div class="cardCode">
         </div>
       </div>
+          <!-- <a class="card-link">IMDb Profile</a> -->
     </div>
   </div>
 </body>

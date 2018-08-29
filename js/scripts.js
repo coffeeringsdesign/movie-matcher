@@ -11,7 +11,7 @@ var solo = new Movie("Solo", 1, 0, 0, 0, "img/solo.jpg", "During an adventure in
 // sad movies
 var titanic = new Movie("Titanic", 0, 5, 0, 0, "img/titanic.jpg", "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.", "https://www.imdb.com/title/tt0120338/");
 var fault = new Movie("Fault In Our Stars", 0, 4, 0, 0, "img/the-fault-in-our-stars.jpg", "Two teenage cancer patients begin a life-affirming journey to visit a reclusive author in Amsterdam.", "https://www.imdb.com/title/tt2582846/");
-// var schindlers = new Movie("Schindler's List", 0, 5, 0, 0, "img/schindlers-list.jpg", "In German-occupied Poland during World War II, Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazi Germans.", "https://www.imdb.com/title/tt0108052/");
+var schindlers = new Movie("Schindler's List", 0, 5, 0, 0, "img/schindlers-list.jpg", "In German-occupied Poland during World War II, Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazi Germans.", "https://www.imdb.com/title/tt0108052/");
 var alice = new Movie("Still Alice", 0, 3, 0, 0, "img/still-alice.jpg", "A linguistics professor and her family find their bonds tested when she is diagnosed with Alzheimer's Disease.", "https://www.imdb.com/title/tt3316960/");
 var coco = new Movie("Coco", 0, 2, 0, 0, "img/coco.jpg", "Aspiring musician Miguel, confronted with his family's ancestral ban on music, enters the Land of the Dead to find his great-great-grandfather, a legendary singer.", "https://www.imdb.com/title/tt2380307");
 var findingNemo = new Movie("Finding Nemo", 0, 1, 0, 0, "img/nemo.jpg", "After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home.", "https://www.imdb.com/title/tt0266543");
@@ -35,7 +35,7 @@ var perksWallflower = new Movie("The Perks of Being a Wallflower", 0, 0, 1, 0, "
 
 // movies et al
 
-var masterMoviesLists = [titanic, fault, coco, findingNemo, alice, gilmore, monsters, amelie, up, solo, kungFu, taken, fightClub, tarzan, perksWallflower, sleepless, fiveHundredDays, crazyStupid, blackPanther, eternalSunshine];
+var masterMoviesLists = [schindlers, titanic, fault, coco, findingNemo, alice, gilmore, monsters, amelie, up, solo, kungFu, taken, fightClub, tarzan, perksWallflower, sleepless, fiveHundredDays, crazyStupid, blackPanther, eternalSunshine];
 
 function sayIfHappy(happyInput) {
   var newMovie = new Movie();
@@ -69,7 +69,7 @@ function sayIfSad(sadInput) {
     console.log(sadInput);
     if (movie.sadCategory === 5 && sadInput === 5) {
       // console.log("titanic!");
-      newMovie = titanic;
+      newMovie = schindlers && titanic;
     } else if (movie.sadCategory === 4  && sadInput === 4) {
       // console.log("fault!");
       newMovie = fault;
@@ -187,13 +187,23 @@ $(document).ready(function() {
     event.preventDefault();
     $(".results").show();
 
-    var happyInput = parseInt($("input[name='happyMood']:checked").val());
+    var happyInput = parseInt($("input[name='happyRange']").val());
     newMovie = sayIfHappy(happyInput);
+
+    $(".cardCode").html(
+      "<div class='card showMovie' style='width: 18rem;' value='MOOD'>" +
+      "<div class='card-body'>" +
+      "<span id='imageLocation'></span>" +
+      "<h5 class='card-title' id='title'><span id='testText'></span></h5>" +
+      "<p class='card-text' id='description'></p>" +
+      "<p id='linkLocation'></p>" +
+      "</div></div>"
+    );
 
     $("#title").text(newMovie.title);
     $("#description").text(newMovie.description);
-    $("#linkLocation").append("<a href='" + newMovie.link + "'>IMDb Profile</a>");
-    $("#imageLocation").append("<img class='card-img-top' src='" + newMovie.imgFile + "'>");
+    $("#linkLocation").html("<a href='" + newMovie.link + "'>IMDb Profile</a>");
+    $("#imageLocation").html("<img class='card-img-top' src='" + newMovie.imgFile + "'>");
   });
 
 
@@ -201,13 +211,23 @@ $(document).ready(function() {
     event.preventDefault();
     $(".results").show();
 
-    var angstInput = parseInt($("input[name='angstMood']:checked").val());
+    var angstInput = parseInt($("input[name='angstRange']").val());
     newMovie = sayIfAngst(angstInput);
+
+    $(".cardCode").html(
+      "<div class='card showMovie' style='width: 18rem;' value='MOOD'>" +
+      "<div class='card-body'>" +
+      "<span id='imageLocation'></span>" +
+      "<h5 class='card-title' id='title'><span id='testText'></span></h5>" +
+      "<p class='card-text' id='description'></p>" +
+      "<p id='linkLocation'></p>" +
+      "</div></div>"
+    );
 
     $("#title").text(newMovie.title);
     $("#description").text(newMovie.description);
-    $("#linkLocation").append("<a href='" + newMovie.link + "'>IMDb Profile</a>");
-    $("#imageLocation").append("<img class='card-img-top' src='" + newMovie.imgFile + "'>");
+    $("#linkLocation").html("<a href='" + newMovie.link + "'>IMDb Profile</a>");
+    $("#imageLocation").html("<img class='card-img-top' src='" + newMovie.imgFile + "'>");
   });
 
 
@@ -215,29 +235,53 @@ $(document).ready(function() {
     event.preventDefault();
     $(".results").show();
 
-    var loveInput = parseInt($("input[name='loveMood']:checked").val());
+    var loveInput = parseInt($("input[name='loveRange']").val());
     newMovie = sayIfLove(loveInput);
+
+    $(".cardCode").html(
+      "<div class='card showMovie' style='width: 18rem;' value='MOOD'>" +
+      "<div class='card-body'>" +
+      "<span id='imageLocation'></span>" +
+      "<h5 class='card-title' id='title'><span id='testText'></span></h5>" +
+      "<p class='card-text' id='description'></p>" +
+      "<p id='linkLocation'></p>" +
+      "</div></div>"
+    );
 
     $("#title").text(newMovie.title);
     $("#description").text(newMovie.description);
-    $("#linkLocation").append("<a href='" + newMovie.link + "'>IMDb Profile</a>");
-    $("#imageLocation").append("<img class='card-img-top' src='" + newMovie.imgFile + "'>");
+    $("#linkLocation").html("<a href='" + newMovie.link + "'>IMDb Profile</a>");
+    $("#imageLocation").html("<img class='card-img-top' src='" + newMovie.imgFile + "'>");
   });
 
 
 
   $("#sadSubmit").submit(function(event) {
     event.preventDefault();
+    // $(".results").hide();
     $(".results").show();
 
-    var sadInput = parseInt($("input[name='sadMood']:checked").val());
+    var sadInput = parseInt($("input[name='sadRange']").val());
     console.log(sadInput);
     newMovie = sayIfSad(sadInput);
 
+    // if (newMovie > 1) {
+    //
+    // }
+    $(".cardCode").html(
+      "<div class='card showMovie' style='width: 18rem;' value='MOOD'>" +
+      "<div class='card-body'>" +
+      "<span id='imageLocation'></span>" +
+      "<h5 class='card-title' id='title'><span id='testText'></span></h5>" +
+      "<p class='card-text' id='description'></p>" +
+      "<p id='linkLocation'></p>" +
+      "</div></div>"
+    );
+
     $("#title").text(newMovie.title);
     $("#description").text(newMovie.description);
-    $("#linkLocation").append("<a href='" + newMovie.link + "'>IMDb Profile</a>");
-    $("#imageLocation").append("<img class='card-img-top' src='" + newMovie.imgFile + "'>");
+    $("#linkLocation").html("<a href='" + newMovie.link + "'>IMDb Profile</a>");
+    $("#imageLocation").html("<img class='card-img-top' src='" + newMovie.imgFile + "'>");
   });
 
     // console.log(sadInput);
