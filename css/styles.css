@@ -64,3 +64,8 @@ body {
 .pull-right {
   float: right;
 }
+
+.refresh {
+  display: none;
+  width: 200px;
+}
