@@ -338,3 +338,33 @@ $(document).ready(function() {
 
 
   });
+
+  var meetJoeBlack = new Movie("Meet Joe Black", 1, 3, 3, 3, "img/meet-joe-black.jpg", "Death, who takes the form of a young man, asks a media mogul to act as a guide to teach him about life on Earth, and in the process, he falls in love with his guide's daughter.", "http://www.imdb.com/title/tt0119643");
+
+var departed = new Movie("The Departed", 0, 2, 5, 0, "img/departed.jpg", "An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.", "https://www.imdb.com/title/tt0407887");
+
+var hook = new Movie("Hook", 4, 1, 2, 2, "img/hook.jpg", "When Captain Hook kidnaps his children, an adult Peter Pan must return to Neverland and reclaim his youthful spirit in order to challenge his old enemy.", "https://www.imdb.com/title/tt0102057");
+
+var leagueofTheirOwn = new Movie("A League of Their Own", 3, 1, 2, 2, "img/league-of-their-own.jpg", "Two sisters join the first female professional baseball league and struggle to help it succeed amidst their own growing rivalry.", "https://www.imdb.com/title/tt0104694");
+
+var iamLegend = new Movie("I Am Legend", 0, 5, 4, 0, "img/i-am-legend.jpg", "Years after a plague kills most of humanity and transforms the rest into monsters, the sole survivor in New York City struggles valiantly to find a cure.", "https://www.imdb.com/title/tt0480249");
+
+var getOut = new Movie("Get Out", 0, 2, 5, 1, "img/get-out.jpg", "A young African-American visits his white girlfriend's parents for the weekend, where his simmering uneasiness about their reception of him eventually reaches a boiling point.", "https://www.imdb.com/title/tt5052448");
+
+var aQuietPlace = new Movie("A Quiet Place", 0, 5, 5, 1, "img/quiet-place.jpg", "In a post-apocalyptic world, a family is forced to live in silence while hiding from monsters with ultra-sensitive hearing.", "https://www.imdb.com/title/tt6644200");
+
+====
+
+var rbg = new Movie("RBG", 3, 1, 2, 3, "img/rbg.jpg", "The exceptional life and career of U.S. Supreme Court Justice Ruth Bader Ginsburg, who has developed a breathtaking legal legacy while becoming an unexpected pop culture icon.", "https://www.imdb.com/title/tt7689964");
+
+var wonderWoman = new Movie("Wonder Woman", 2, 2, 3, 3, "img/wonder-woman.jpg", "When a pilot crashes and tells of conflict in the outside world, Diana, an Amazonian warrior in training, leaves home to fight a war, discovering her full powers and true destiny.", "https://www.imdb.com/title/tt0451279");
+
+var notebook = new Movie("The Notebook", 3, 4, 2, 5, "img/notebook.jpg", "A poor yet passionate young man falls in love with a rich young woman, giving her a sense of freedom, but they are soon separated because of their social differences.", "https://www.imdb.com/title/tt0332280");
+
+var theProfessional = new Movie("The Professional", 1, 3, 4, 0, "img/the-professional.jpg", "Mathilda, a 12-year-old girl, is reluctantly taken in by Léon, a professional assassin, after her family is murdered. Léon and Mathilda form an unusual relationship, as she becomes his protégée and learns the assassin's trade.", "https://www.imdb.com/title/tt0110413");
+
+var hiddenFigures = new Movie("Hidden Figures", 3, 2, 4, 2, "img/hidden-figures.jpg", "The story of a team of female African-American mathematicians who served a vital role in NASA during the early years of the U.S. space program.", "https://www.imdb.com/title/tt4846340");
+
+var arrival = new Movie("Arrival", 2, 1, 3, 2, "img/arrival.jpg", "A linguist is recruited by the military to communicate with alien lifeforms after twelve mysterious spacecrafts land around the world.", "https://www.imdb.com/title/tt2543164");
+
+var profMarston = new Movie("Professor Marston and the Wonder Women", 3, 1, 3, 5, "img/prof-marston.jpg", "The story of psychologist William Moulton Marston, and his polyamorous relationship with his wife and their mistress who would inspire his creation of the superheroine, Wonder Woman.", "https://www.imdb.com/title/tt6133130");
