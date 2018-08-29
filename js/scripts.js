@@ -67,7 +67,7 @@ function sayIfSad(sadInput, movieResults) {
     // var movieResults = [];
     if (movie.sadCategory === 5 && sadInput === 5) {
       // console.log("titanic!");
-      movieResults.push(titanic, schindlers);
+      movieResults.push(movie);
       // return;
     } else if (movie.sadCategory === 4  && sadInput === 4) {
       // console.log("fault!");
@@ -268,15 +268,16 @@ $(document).ready(function() {
 
     var sadInput = parseInt($("input[name='sadRange']").val());
     sayIfSad(sadInput, movieResults);
-    console.log(movieResults);
 
-    for (var i = 0; i <= movieResults.length; i++) {
+    for (var i = 0; i < movieResults.length; i++) {
       var titleId = "title" + i;
       var imgId = "img" + i;
       var descId = "desc" + i;
       var linkId = "link" + i;
 
-      $(".cardCode").html(
+      console.log(movieResults);
+
+      $(".cardCode").append(
         "<div class='card showMovie' style='width: 18rem;' value='MOOD'>" +
         "<div class='card-body'>" +
         "<span class='imgSpace' id='" + imgId + "'></span>" +
@@ -286,10 +287,17 @@ $(document).ready(function() {
         "</div></div>"
       );
 
-        $(".titleSpace").text(titleId);
-        $(".descSpace").text(descId);
-        $(".linkSpace").html("<a href='" + linkId + "'>IMDb Profile</a>");
-        $(".imgSpace").html("<img class='card-img-top' src='" + imgId + "'>");
+      var titleIdInsert = '#' + titleId;
+      var descIdInsert = '#' + descId;
+      var linkIdInsert = '#' + linkId;
+      var imgIdInsert = '#' + imgId;
+
+      var currentMovie = movieResults[i];
+
+        $(titleIdInsert).text(currentMovie.title);
+        $(descIdInsert).text(currentMovie.description);
+        $(linkIdInsert).html("<a href='" + (currentMovie.link) + "'>IMDb Profile</a>");
+        $(linkIdInsert).html("<img class='card-img-top' src='" + (currentMovie.imgFile) + "'>");
       }
 
     });
