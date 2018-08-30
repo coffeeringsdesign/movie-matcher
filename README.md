@@ -9,10 +9,10 @@
 This application allows users to select their current mood and view a list of movies suitable for that mood.
 
 ### Specifications
-* Inputs with attached value display cards with those values
-  * Example Input: [radio button: Happy]
-  * Example Output: [Happy Gilmore card] & [Monsters Inc card]
-* Results are customized based on user input value
+* When a mood button is clicked, a corresponding mood range slider is shown
+  * Example Input: [click button: Happy]
+  * Example Output: [HappyRange slider]
+* When an input range value
   * Example Input: [happy range - 5 happiness ranking]
   * Example Output: [Happy Gilmore card]
 
