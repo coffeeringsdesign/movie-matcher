@@ -62,7 +62,8 @@ function sayIfHappy(happyInput, movieResults) {
       movieResults.push(movie);
     } else if (movie.happyCategory === 3  && happyInput === 3) {
       movieResults.push(movie);
-    } else if (movie.happyCategory === 2  && happyInput === 2) {      movieResults.push(movie);
+    } else if (movie.happyCategory === 2  && happyInput === 2) {
+      movieResults.push(movie);
     } else if (movie.happyCategory === 1  && happyInput === 1) {
       movieResults.push(movie);
     }
@@ -125,7 +126,7 @@ function sayIfLove(loveInput, movieResults) {
 }
 
 // business
-function Movie(title, happyCategory, sadCategory, angstCategory, loveCategory, imgFile, description, link, slider) {
+function Movie(title, happyCategory, sadCategory, angstCategory, loveCategory, imgFile, description, link) {
   this.title = title;
   this.happyCategory = happyCategory;
   this.sadCategory = sadCategory;
@@ -163,6 +164,7 @@ $(document).ready(function() {
     $("#happySubmitbtn").hide();
     $("#happySubmit").hide();
     $("#refresh").show();
+    $(".submittoAddMovie").show();
 
     var movieResults = [];
     var happyInput = parseInt($("input[name='happyRange']").val());
@@ -205,6 +207,7 @@ $(document).ready(function() {
     $("#angstSubmitbtn").hide();
     $("#angstSubmit").hide();
     $("#refresh").show();
+    $(".submittoAddMovie").show();
 
     var movieResults = [];
     var angstInput = parseInt($("input[name='angstRange']").val());
@@ -245,6 +248,7 @@ $(document).ready(function() {
     $("#loveSubmitbtn").hide();
     $("#loveSubmit").hide();
     $("#refresh").show();
+    $(".submittoAddMovie").show();
 
     var movieResults = [];
     var loveInput = parseInt($("input[name='loveRange']").val());
@@ -286,6 +290,7 @@ $(document).ready(function() {
     $("#sadSubmitbtn").hide();
     $("#sadSubmit").hide();
     $("#refresh").show();
+    $(".submittoAddMovie").show();
 
     var movieResults = [];
     var sadInput = parseInt($("input[name='sadRange']").val());
@@ -319,5 +324,19 @@ $(document).ready(function() {
         $(imgIdInsert).html("<img class='card-img-top' src='" + (currentMovie.imgFile) + "'>");
 
     };
+  $(".newMovieSubmitbtn").submit(function(event) {
+    event.preventDefault();
+
+    var title = $("#movieTitleInput").val();
+    var description = $("#movieDescInput").val();
+    var imgFile = $("#moviePicture").val();
+    var link = $("#movieIMDBinput").val();
+    var happyCategory = parseInt($("input:[name='happyCategoryNew']").val());
+    var sadCategory = parseInt($("input:[name='sadCategoryNew']").val());
+    var loveCategory = parseInt($("input:[name='loveCategoryNew']").val());
+    var angstCategory = parseInt($("input:[name='angstCategoryNew']").val());
+
+  var newMovie = new Movie(title, happyCategory, sadCategory, angstCategory, loveCategory, imgFile, description, link)
+    });
   });
 });
