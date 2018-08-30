@@ -11,10 +11,16 @@ This application allows users to select their current mood and view a list of mo
 ### Specifications
 * When a mood button is clicked, a corresponding mood range slider is shown
   * Example Input: [click button: Happy]
-  * Example Output: [HappyRange slider]
-* When an input range value
-  * Example Input: [happy range - 5 happiness ranking]
-  * Example Output: [Happy Gilmore card]
+  * Example Output: [happyRange slider]
+* When an input range value is submitted, cards containing objects with corresponding property values are created and displayed
+  * Example Input: [happyRange - 5]
+  * Example Output: [Happy Gilmore card, She's The Man card, The Lion King card, Home Alone card, Shrek card]
+* When an input range value is submitted, a form for users to add their own movies is shown
+  * Example Input: [happyRange - 5]
+  * Example Output: [form]
+* When user enters information and submits the add movie form, a new movie card with the inputted information is created and displayed
+  * Example Input: ["Lord of the Rings: The Fellowship of the Ring", 2, 3, 3, 1, "https://goo.gl/hWYo2f", "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.", "https://www.imdb.com/title/tt0120737/"]
+  * Example Output: (new Movie object added to masterMoviesLists array)
 
 
 ## Setup
