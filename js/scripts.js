@@ -138,6 +138,7 @@ function Movie(title, happyCategory, sadCategory, angstCategory, loveCategory, i
 
 // user interface
 $(document).ready(function() {
+  $("#refresh").hide();
 
   $("#happyButton").click(function(){
     $(".moodButtons").hide();
@@ -159,7 +160,7 @@ $(document).ready(function() {
 // submit functions for each emotions
   $("#happySubmit").submit(function(event) {
     event.preventDefault();
-    $(".results").show();
+    $(".results").fadeIn();
     $("#happySubmitbtn").hide();
     $("#happySubmit").hide();
     $("#refresh").show();
@@ -201,7 +202,7 @@ $(document).ready(function() {
 
   $("#angstSubmit").submit(function(event) {
     event.preventDefault();
-    $(".results").show();
+    $(".results").fadeIn();
     $("#angstSubmitbtn").hide();
     $("#angstSubmit").hide();
     $("#refresh").show();
@@ -241,7 +242,7 @@ $(document).ready(function() {
 
   $("#loveSubmit").submit(function(event) {
     event.preventDefault();
-    $(".results").show();
+    $(".results").fadeIn();
     $("#loveSubmitbtn").hide();
     $("#loveSubmit").hide();
     $("#refresh").show();
@@ -282,7 +283,7 @@ $(document).ready(function() {
 
   $("#sadSubmit").submit(function(event) {
     event.preventDefault();
-    $(".results").show();
+    $(".results").fadeIn();
     $("#sadSubmitbtn").hide();
     $("#sadSubmit").hide();
     $("#refresh").show();
