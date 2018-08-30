@@ -1,5 +1,38 @@
 body {
-  background: radial-gradient(#EFEFEF, #635F62);
+  background-image: url("../img/5021.png");
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+::selection {
+  background-color: black;
+  color: white;
+}
+
+::-moz-selection {
+  background-color: black;
+  color: white;
+}
+
+.container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h3 {
+  margin-bottom: 30px;
+  color: white;
+  font-weight: bold;
+}
+
+h5 {
+  margin-top: 20px;
+  font-family: 'Domine', serif;
+  font-size: 20px;
+}
+
+p {
+  font-size: 18px;
 }
 
 .siteTitle {
@@ -9,6 +42,7 @@ body {
 }
 
 #moodButtonSpace {
+  text-align: center;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -28,8 +62,10 @@ body {
 
 .btn {
   margin-left: 20px;
+  margin-bottom: 30px;
   margin-right: 20px;
   width: 115px;
+  font-weight: bold;
 }
 
 .pull-right {
@@ -37,8 +73,11 @@ body {
 }
 
 #happySubmitbtn, #sadSubmitbtn, #angstSubmitbtn, #loveSubmitbtn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-
+  margin-top: 30px;
 }
 
 #happySubmit, #sadSubmit, #angstSubmit, #loveSubmit {
@@ -66,6 +105,47 @@ body {
 }
 
 #refresh {
-  display: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
   width: 300px;
+  color: white;
+}
+
+#coverImage {
+  width: 40%;
+  margin-top: 45px;
+  margin-bottom: 30px;
+}
+
+.cardCode {
+  width: 100%;
+  margin-left: 7%;
+  margin-right: 7%;
+  margin-bottom: 10%;
+}
+
+.card {
+  margin: 1%;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+#submitAMovie {
+  display: none;
+}
+
+label {
+  color: white;
+}
+
+a {
+  color: black;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #7a7a7a;
+  text-decoration: none;
 }
