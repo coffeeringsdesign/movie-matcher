@@ -29,7 +29,7 @@ body {
 .btn {
   margin-left: 20px;
   margin-right: 20px;
-  width: 90px;
+  width: 115px;
 }
 
 .pull-right {
@@ -65,7 +65,7 @@ body {
   float: right;
 }
 
-.refresh {
+#refresh {
   display: none;
-  width: 200px;
+  width: 300px;
 }

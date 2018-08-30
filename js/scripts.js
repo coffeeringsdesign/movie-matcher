@@ -162,7 +162,7 @@ $(document).ready(function() {
     $(".results").show();
     $("#happySubmitbtn").hide();
     $("#happySubmit").hide();
-    $(".refresh").show();
+    $("#refresh").show();
 
     var movieResults = [];
     var happyInput = parseInt($("input[name='happyRange']").val());
@@ -204,7 +204,7 @@ $(document).ready(function() {
     $(".results").show();
     $("#angstSubmitbtn").hide();
     $("#angstSubmit").hide();
-    $(".refresh").show();
+    $("#refresh").show();
 
     var movieResults = [];
     var angstInput = parseInt($("input[name='angstRange']").val());
@@ -244,7 +244,7 @@ $(document).ready(function() {
     $(".results").show();
     $("#loveSubmitbtn").hide();
     $("#loveSubmit").hide();
-    $(".refresh").show();
+    $("#refresh").show();
 
     var movieResults = [];
     var loveInput = parseInt($("input[name='loveRange']").val());
@@ -285,7 +285,7 @@ $(document).ready(function() {
     $(".results").show();
     $("#sadSubmitbtn").hide();
     $("#sadSubmit").hide();
-    $(".refresh").show();
+    $("#refresh").show();
 
     var movieResults = [];
     var sadInput = parseInt($("input[name='sadRange']").val());
