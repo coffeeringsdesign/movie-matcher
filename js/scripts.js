@@ -14,7 +14,7 @@ var soundOf = new Movie("The Sound of Music", 4, 2, 1, 3, "img/sound-of-music.jp
 var homeAlone = new Movie("Home Alone", 5, 0, 1, 0, "img/home-alone.jpg", "An eight-year-old troublemaker must protect his house from a pair of burglars when he is accidentally left home alone by his family during Christmas vacation.", "https://www.imdb.com/title/tt0099785/");
 var shrek = new Movie("Shrek", 5, 1, 1, 4, "img/shrek.jpg", "After his swamp is filled with magical creatures, Shrek agrees to rescue Princess Fiona for a villainous lord in order to get his land back.", "https://www.imdb.com/title/tt0126029/");
 var titanic = new Movie("Titanic", 0, 5, 0, 3, "img/titanic.jpg", "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.", "https://www.imdb.com/title/tt0120338/");
-var fault = new Movie("Fault In Our Stars", 2, 4, 0, 4, "img/the-fault-in-our-stars.jpg", "Two teenage cancer patients begin a life-affirming journey to visit a reclusive author in Amsterdam.", "https://www.imdb.com/title/tt2582846/");
+var fault = new Movie("The Fault In Our Stars", 2, 4, 0, 4, "img/the-fault-in-our-stars.jpg", "Two teenage cancer patients begin a life-affirming journey to visit a reclusive author in Amsterdam.", "https://www.imdb.com/title/tt2582846/");
 var schindlers = new Movie("Schindler's List", 0, 5, 0, 0, "img/schindlers-list.jpg", "In German-occupied Poland during World War II, Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazi Germans.", "https://www.imdb.com/title/tt0108052/");
 var alice = new Movie("Still Alice", 1, 3, 0, 1, "img/still-alice.jpg", "A linguistics professor and her family find their bonds tested when she is diagnosed with Alzheimer's Disease.", "https://www.imdb.com/title/tt3316960/");
 var coco = new Movie("Coco", 4, 2, 1, 3, "img/coco.jpg", "Aspiring musician Miguel, confronted with his family's ancestral ban on music, enters the Land of the Dead to find his great-great-grandfather, a legendary singer.", "https://www.imdb.com/title/tt2380307");
@@ -55,7 +55,12 @@ var jumanjiJungle = new Movie("Jumanji: Welcome to the Jungle", 2, 0, 3, 4, "img
 
 var masterMoviesLists = [schindlers, titanic, fault, coco, findingNemo, alice, gilmore, monsters, amelie, up, solo, kungFu, taken, fightClub, tarzan, perksWallflower, sleepless, fiveHundredDays, crazyStupid, blackPanther, eternalSunshine, theMan, emperor, forrest, future, lionKing, soundOf, homeAlone, shrek, tenThings, loveActually, clueless, grease, prada, starWars, meetJoeBlack, departed, hook, leagueofTheirOwn, iamLegend, getOut, aQuietPlace, rbg, wonderWoman, notebook, theProfessional, hiddenFigures, arrival, profMarston, kingKong, jumanjiJungle];
 
-function sayIfHappy(happyInput, movieResults) {
+function addUserNewMovie(userNewMovie) {
+  masterMoviesLists.push(userNewMovie);
+  console.log(masterMoviesLists);
+}
+
+function sayIfHappy(happyInput, movieResults, userInputList) {
   var newMovie = new Movie();
   masterMoviesLists.forEach(function(movie) {
     if (movie.happyCategory === 5 && happyInput === 5) {
@@ -64,7 +69,8 @@ function sayIfHappy(happyInput, movieResults) {
       movieResults.push(movie);
     } else if (movie.happyCategory === 3  && happyInput === 3) {
       movieResults.push(movie);
-    } else if (movie.happyCategory === 2  && happyInput === 2) {      movieResults.push(movie);
+    } else if (movie.happyCategory === 2  && happyInput === 2) {
+      movieResults.push(movie);
     } else if (movie.happyCategory === 1  && happyInput === 1) {
       movieResults.push(movie);
     }
@@ -127,7 +133,7 @@ function sayIfLove(loveInput, movieResults) {
 }
 
 // business
-function Movie(title, happyCategory, sadCategory, angstCategory, loveCategory, imgFile, description, link, slider) {
+function Movie(title, happyCategory, sadCategory, angstCategory, loveCategory, imgFile, description, link) {
   this.title = title;
   this.happyCategory = happyCategory;
   this.sadCategory = sadCategory;
@@ -140,6 +146,7 @@ function Movie(title, happyCategory, sadCategory, angstCategory, loveCategory, i
 
 // user interface
 $(document).ready(function() {
+  $("#refresh").hide();
 
   $("#happyButton").click(function(){
     $(".moodButtons").hide();
@@ -161,10 +168,11 @@ $(document).ready(function() {
 // submit functions for each emotions
   $("#happySubmit").submit(function(event) {
     event.preventDefault();
-    $(".results").show();
+    $(".results").fadeIn();
     $("#happySubmitbtn").hide();
     $("#happySubmit").hide();
     $("#refresh").show();
+    $(".submittoAddMovie").show();
 
     var movieResults = [];
     var happyInput = parseInt($("input[name='happyRange']").val());
@@ -203,10 +211,11 @@ $(document).ready(function() {
 
   $("#angstSubmit").submit(function(event) {
     event.preventDefault();
-    $(".results").show();
+    $(".results").fadeIn();
     $("#angstSubmitbtn").hide();
     $("#angstSubmit").hide();
     $("#refresh").show();
+    $(".submittoAddMovie").show();
 
     var movieResults = [];
     var angstInput = parseInt($("input[name='angstRange']").val());
@@ -243,10 +252,11 @@ $(document).ready(function() {
 
   $("#loveSubmit").submit(function(event) {
     event.preventDefault();
-    $(".results").show();
+    $(".results").fadeIn();
     $("#loveSubmitbtn").hide();
     $("#loveSubmit").hide();
     $("#refresh").show();
+    $(".submittoAddMovie").show();
 
     var movieResults = [];
     var loveInput = parseInt($("input[name='loveRange']").val());
@@ -284,10 +294,11 @@ $(document).ready(function() {
 
   $("#sadSubmit").submit(function(event) {
     event.preventDefault();
-    $(".results").show();
+    $(".results").fadeIn();
     $("#sadSubmitbtn").hide();
     $("#sadSubmit").hide();
     $("#refresh").show();
+    $(".submittoAddMovie").show();
 
     var movieResults = [];
     var sadInput = parseInt($("input[name='sadRange']").val());
@@ -321,5 +332,23 @@ $(document).ready(function() {
         $(imgIdInsert).html("<img class='card-img-top' src='" + (currentMovie.imgFile) + "'>");
 
     };
+  });
+
+  $("#submitAMovie").submit(function(event) {
+    event.preventDefault();
+
+    var title = $("#movieTitleInput").val();
+    var description = $("#movieDescInput").val();
+    var imgFile = $("#moviePicture").val();
+    var link = $("#movieIMDBinput").val();
+    var happyCategory = parseInt($("input[name='happyCategoryNew']").val());
+    var sadCategory = parseInt($("input[name='sadCategoryNew']").val());
+    var loveCategory = parseInt($("input[name='loveCategoryNew']").val());
+    var angstCategory = parseInt($("input[name='angstCategoryNew']").val());
+
+  //
+  var userNewMovie = new Movie(title, happyCategory, sadCategory, angstCategory, loveCategory, imgFile, description, link)
+  console.log(userNewMovie);
+  addUserNewMovie(userNewMovie);
   });
 });
