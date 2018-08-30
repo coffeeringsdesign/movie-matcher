@@ -53,7 +53,12 @@ var profMarston = new Movie("Professor Marston and the Wonder Women", 3, 1, 3, 5
 
 var masterMoviesLists = [schindlers, titanic, fault, coco, findingNemo, alice, gilmore, monsters, amelie, up, solo, kungFu, taken, fightClub, tarzan, perksWallflower, sleepless, fiveHundredDays, crazyStupid, blackPanther, eternalSunshine, theMan, emperor, forrest, future, lionKing, soundOf, homeAlone, shrek, tenThings, loveActually, clueless, grease, prada, starWars, meetJoeBlack, departed, hook, leagueofTheirOwn, iamLegend, getOut, aQuietPlace, rbg, wonderWoman, notebook, theProfessional, hiddenFigures, arrival, profMarston];
 
-function sayIfHappy(happyInput, movieResults) {
+function addUserNewMovie(userNewMovie) {
+  masterMoviesLists.push(userNewMovie);
+  console.log(masterMoviesLists);
+}
+
+function sayIfHappy(happyInput, movieResults, userInputList) {
   var newMovie = new Movie();
   masterMoviesLists.forEach(function(movie) {
     if (movie.happyCategory === 5 && happyInput === 5) {
@@ -324,19 +329,23 @@ $(document).ready(function() {
         $(imgIdInsert).html("<img class='card-img-top' src='" + (currentMovie.imgFile) + "'>");
 
     };
-  $(".newMovieSubmitbtn").submit(function(event) {
+  });
+
+  $("#submitAMovie").submit(function(event) {
     event.preventDefault();
 
     var title = $("#movieTitleInput").val();
     var description = $("#movieDescInput").val();
     var imgFile = $("#moviePicture").val();
     var link = $("#movieIMDBinput").val();
-    var happyCategory = parseInt($("input:[name='happyCategoryNew']").val());
-    var sadCategory = parseInt($("input:[name='sadCategoryNew']").val());
-    var loveCategory = parseInt($("input:[name='loveCategoryNew']").val());
-    var angstCategory = parseInt($("input:[name='angstCategoryNew']").val());
+    var happyCategory = parseInt($("input[name='happyCategoryNew']").val());
+    var sadCategory = parseInt($("input[name='sadCategoryNew']").val());
+    var loveCategory = parseInt($("input[name='loveCategoryNew']").val());
+    var angstCategory = parseInt($("input[name='angstCategoryNew']").val());
 
-  var newMovie = new Movie(title, happyCategory, sadCategory, angstCategory, loveCategory, imgFile, description, link)
-    });
+  //
+  var userNewMovie = new Movie(title, happyCategory, sadCategory, angstCategory, loveCategory, imgFile, description, link)
+  console.log(userNewMovie);
+  addUserNewMovie(userNewMovie);
   });
 });
