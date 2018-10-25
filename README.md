@@ -25,12 +25,12 @@ This application allows users to select their current mood and view a list of mo
 
 ## Setup/Installation Requirements
 Using Command Line:
-1. ``git clone https://github.com/coffeeringsdesign/crest-fallen-indie-game.git `` to clone the site.
-2. ``cd ~`` to navigate to base directory
-3. ``cd Desktop `` to navigate to your desktop
-4. ``cd crest-fallen-indie-game`` to enter the site folder
-5. ``npm init -y`` to initialize node
-6. ``npm install`` to install all webpack dependencies
+1. ``git clone https://github.com/coffeeringsdesign/moviematcher.git `` to clone the site.
+2. ``cd ~`` to navigate to base directory.
+3. ``cd Desktop `` to navigate to your desktop.
+4. ``cd moviematcher`` to enter the site folder.
+5. ``npm init -y`` to initialize node.
+6. ``npm install`` to install all webpack dependencies.
 7. ``npm run start`` this will webpack and immediate pop open the site on your brower. I recommend Chrome.
 8. Use Atom to edit any html, javascript, or sass.
 
@@ -45,7 +45,6 @@ Large Screen Screenshots | Mobile Screenshots
 ## Support and contact details
 
 Please feel free to get in touch. Reach out to me at kendra@coffeeringsdesign.com.
-
 
 ## Technologies Used
 * HTML
