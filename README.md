@@ -25,7 +25,7 @@ This application allows users to select their current mood, narrow down the leve
 
 ## Setup/Installation Requirements
 Using Command Line:
-1. ``git clone https://github.com/coffeeringsdesign/moviematcher.git `` to clone the site.
+1. ``git clone https://github.com/coffeeringsdesign/movie-matcher.git `` to clone the site.
 2. ``cd ~`` to navigate to base directory.
 3. ``cd Desktop `` to navigate to your desktop.
 4. ``cd moviematcher`` to enter the site folder.
