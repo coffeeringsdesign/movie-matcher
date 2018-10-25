@@ -7,7 +7,7 @@
 
 ## Description
 
-This application allows users to select their current mood and view a list of movies suitable for that mood.
+This application allows users to select their current mood, narrow down the level of emotion they want, and view a list of movies suitable for that mood.
 
 ### Specifications
 * When a mood button is clicked, a corresponding mood range slider is shown
@@ -38,9 +38,10 @@ Using Command Line:
 
 Large Screen Screenshots | Mobile Screenshots
 ---------------------- | -----------------------
-![Web Screenshot](a.png) | ![Mobile Screenshot](f.png)
-![Web Screenshot](b.png) | ![Mobile Screenshot](e.png)
-![Web Screenshot](c.png) | ![Mobile Screenshot](d.png)
+![Web Screenshot](1.png) | ![Mobile Screenshot](5.png)
+![Web Screenshot](2.png) | ![Mobile Screenshot](5.png)
+![Web Screenshot](3.png) | 
+![Web Screenshot](4.png) | 
 
 ## Support and contact details
 
