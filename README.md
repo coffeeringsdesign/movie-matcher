@@ -7,7 +7,7 @@
 
 ## Description
 
-This application allows users to select their current mood, narrow down the level of emotion they want, and view a list of movies suitable for that mood.
+This application allows users to select their current mood, narrow down the level of emotion they want, and view a list of movies suitable for that mood. They also have the option to fill out a form to add a movie to the database.
 
 ### Specifications
 * When a mood button is clicked, a corresponding mood range slider is shown
