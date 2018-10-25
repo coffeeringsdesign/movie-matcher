@@ -1,3 +1,4 @@
+![Kendra Kelly Logo](/kkgithub.png)
 # Movie Mood Matcher
 
 #### Movie mood matching app for group project, 8.27.18
@@ -22,15 +23,31 @@ This application allows users to select their current mood and view a list of mo
   * Example Input: ["Lord of the Rings: The Fellowship of the Ring", 2, 3, 3, 1, "https://goo.gl/hWYo2f", "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.", "https://www.imdb.com/title/tt0120737/"]
   * Example Output: (new Movie object added to masterMoviesLists array)
 
+## Setup/Installation Requirements
+Using Command Line:
+1. ``git clone https://github.com/coffeeringsdesign/crest-fallen-indie-game.git `` to clone the site.
+2. ``cd ~`` to navigate to base directory
+3. ``cd Desktop `` to navigate to your desktop
+4. ``cd crest-fallen-indie-game`` to enter the site folder
+5. ``npm init -y`` to initialize node
+6. ``npm install`` to install all webpack dependencies
+7. ``npm run start`` this will webpack and immediate pop open the site on your brower. I recommend Chrome.
+8. Use Atom to edit any html, javascript, or sass.
 
-## Setup
+## Final Screen Shots
 
-* Clone this repository
-* Open a simple HTTP server in the top level of the cloned directory
-* Use git functions to add, commit, and push to the master branch in remote repository
+Large Screen Screenshots | Mobile Screenshots
+---------------------- | -----------------------
+![Web Screenshot](a.png) | ![Mobile Screenshot](f.png)
+![Web Screenshot](b.png) | ![Mobile Screenshot](e.png)
+![Web Screenshot](c.png) | ![Mobile Screenshot](d.png)
+
+## Support and contact details
+
+Please feel free to get in touch. Reach out to me at kendra@coffeeringsdesign.com.
+
 
 ## Technologies Used
-
 * HTML
 * CSS
 * Git
